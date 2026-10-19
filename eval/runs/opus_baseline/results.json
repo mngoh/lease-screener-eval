@@ -1,0 +1,1133 @@
+{
+  "versions": {
+    "run_at": "2026-10-04T21:41:27+00:00",
+    "git_commit": "f9fb2774a5bea2d0bca91590dc703774710a9dd8",
+    "app_code_uncommitted_changes": true,
+    "models": [
+      {
+        "role": "generator",
+        "requested": "claude-opus-5",
+        "served": "claude-opus-5"
+      },
+      {
+        "role": "judge",
+        "requested": "claude-sonnet-4-6",
+        "served": "claude-sonnet-4-6"
+      }
+    ],
+    "prompts_sha256_12": {
+      "dc_generator": "6387f5c740e6",
+      "dc_judge": "d784cb1546ef",
+      "va_generator": "e6c60bc93e4a",
+      "va_judge": "e2e5e9b6c31f"
+    },
+    "model_overrides": {
+      "generator": "claude-opus-5"
+    },
+    "max_report_flags": 5,
+    "law_reference": {
+      "fetched_at": "2026-10-04T21:22:59+00:00",
+      "dc_sha256_12": "c5c0daa51b5d",
+      "dc_chars": 26753,
+      "va_sha256_12": "ed9bc983366e",
+      "va_chars": 16061,
+      "dc_live_sources_present": {
+        "oag": true,
+        "dc_code": true
+      }
+    },
+    "match_threshold": 0.5,
+    "api_calls_this_run": 24,
+    "cached_calls_this_run": 0,
+    "python": "3.13.1",
+    "rescored_at": "2026-10-05T17:54:43+00:00",
+    "ground_truth_sha256_12": "abaf07756f8c"
+  },
+  "unlabeled_leases": [],
+  "scores": {
+    "overall": {
+      "leases": 4,
+      "gt_clauses": 25,
+      "flags": 19,
+      "tp": 6,
+      "fp": 6,
+      "fn": 19,
+      "on_arguable": 7,
+      "precision": 0.5,
+      "recall": 0.24,
+      "f1": 0.3243,
+      "false_alarm_rate": 0.5
+    },
+    "by_jurisdiction": {
+      "DC": {
+        "leases": 2,
+        "gt_clauses": 10,
+        "flags": 10,
+        "tp": 3,
+        "fp": 3,
+        "fn": 7,
+        "on_arguable": 4,
+        "precision": 0.5,
+        "recall": 0.3,
+        "f1": 0.375,
+        "false_alarm_rate": 0.5
+      },
+      "VA": {
+        "leases": 2,
+        "gt_clauses": 15,
+        "flags": 9,
+        "tp": 3,
+        "fp": 3,
+        "fn": 12,
+        "on_arguable": 3,
+        "precision": 0.5,
+        "recall": 0.2,
+        "f1": 0.2857,
+        "false_alarm_rate": 0.5
+      }
+    }
+  },
+  "citation": {
+    "matched_flags_scored": 6,
+    "matched_flags_unscored": 0,
+    "correct": 3,
+    "accuracy_of_matched": 0.5,
+    "gt_clauses_with_citation": 25,
+    "flagged_and_correctly_cited": 0.12
+  },
+  "recall_ceiling": 0.76,
+  "misses": {
+    "by_stage": {
+      "extraction": 0,
+      "generator": 19,
+      "parse": 0,
+      "cap": 0,
+      "judge": 0,
+      "dedup": 0,
+      "merged": 0
+    },
+    "by_bucket": {
+      "retrieval": 0,
+      "judgment": 19
+    },
+    "judge_rejections_outside_judge_window": 0
+  },
+  "grounding": {
+    "flags_with_law_quote": 19,
+    "flags_law_quote_found_in_generator_reference": 9,
+    "gt_citations": 25,
+    "gt_citations_present_in_generator_reference": 1,
+    "note": "computed against the ground truth at run time"
+  },
+  "unscored_citations": [],
+  "leases": [
+    {
+      "lease_file": "DC-1",
+      "jurisdiction": "DC",
+      "gt_clauses": 6,
+      "flags": 5,
+      "tp": 2,
+      "fp": 2,
+      "fn": 4,
+      "on_arguable": 1,
+      "hits": [
+        {
+          "gt": {
+            "line": 3,
+            "clause_excerpt": "As owner of the animal, you’re strictly liable for the entire amount of any injury that the animal causes to a person or anyone’s property. You’ll indemnify us for all costs of litigation and attorney’s fees resulting from any such damage.",
+            "issue": "Requires tenant to pay owner's litigation costs and attorney's fees",
+            "statute_citation": "14 DCMR § 304.4"
+          },
+          "flag": {
+            "index": 3,
+            "severity": "REVIEW WITH ATTORNEY",
+            "title": "Tenant required to pay landlord's attorney's fees and litigation costs",
+            "clause": "\"As owner of the animal, you're strictly liable for the entire amount of any injury that the animal causes to a person or anyone's property. You'll indemnify us for all costs of litigation and attorney's fees resulting from any such damage.\"",
+            "law": "\"No owner shall place (or cause to be placed) in a lease or rental agreement a provision waiving the right of a tenant of residential premises to a jury trial, or requiring that the tenant pay the owner's court costs or legal fees, or authorizing a person other than the tenant to confess judgment against a tenant.\"",
+            "source": "14 DCMR § 304.4",
+            "why": "The lease shifts the landlord's litigation costs and attorney's fees onto the tenant by contract, which DC regulations prohibit; only a court may assess such fees in appropriate circumstances.",
+            "verdict": "APPROVE"
+          },
+          "score": 1.0,
+          "citation_correct": true
+        },
+        {
+          "gt": {
+            "line": 5,
+            "clause_excerpt": "Resident(s) agrees the Manager is not liable to Resident(s), Resident(s) family, Resident(s) guests or other occupants for any injury, damage, or loss whatsoever which is caused as a result of any problem, defect, malfunction or failure of the performance of the controlled access.",
+            "issue": "Exempts owner from all injury caused by controlled access malfunctions",
+            "statute_citation": "14 DCMR § 304.3"
+          },
+          "flag": {
+            "index": 4,
+            "severity": "REVIEW WITH ATTORNEY",
+            "title": "Controlled access / common area liability waiver and covenant not to sue",
+            "clause": "\"Resident(s) agrees the Manager is not liable to Resident(s), Resident(s) family, Resident(s) guests or other occupants for any injury, damage, or loss whatsoever which is caused as a result of any problem, defect, malfunction or failure of the performance of the controlled access.\"",
+            "law": "\"No owner shall cause to be placed in a lease or rental agreement any provision exempting the owner or premises from liability or limiting the liability of the owner or the residential premises from damages for injuries to persons or property caused by or resulting from the negligence of the owner (or the owner's agents, servants, or employees) in the operation, care, or maintenance of the leased premises, or any facility upon or portion of the property of which the leased premises are a part.\"",
+            "source": "14 DCMR § 304.3",
+            "why": "The addendum disclaims all liability — and extracts a covenant not to sue — for injuries arising from a building access facility the landlord installs and maintains, which DC regulations render void.",
+            "verdict": "APPROVE"
+          },
+          "score": 1.0,
+          "citation_correct": true
+        }
+      ],
+      "misses": [
+        {
+          "gt": {
+            "line": 2,
+            "clause_excerpt": "Eviction. If you fail to pay rent, or any other charge hereunder otherwise defined as rent, we or our agents/attorney(s) may forthwith file a non-payment suit for possession of the Apartment.",
+            "issue": "Allows immediate nonpayment suit without the required 10-day pre-filing notice",
+            "statute_citation": "D.C. Code § 42-3505.01(a-1)(1)"
+          },
+          "stage": "generator",
+          "lease_text_score": 0.875,
+          "lease_text_offset": 42761
+        },
+        {
+          "gt": {
+            "line": 4,
+            "clause_excerpt": "Owner and management are not responsible for loss, damage or injury.",
+            "issue": "Pool rule disclaims all owner liability for loss, damage or injury",
+            "statute_citation": "14 DCMR § 304.3"
+          },
+          "stage": "generator",
+          "lease_text_score": 1.0,
+          "lease_text_offset": 150012
+        },
+        {
+          "gt": {
+            "line": 6,
+            "clause_excerpt": "Resident(s) agrees that Resident(s) shall never make demand upon, look to, institute or prosecute suit against Manager, or any of Manager’s agents, contractors, employees or representatives, their heirs, successors or assigns, for any damages, costs, loss of personal property, damage or injury to Resident(s) person as a result of, arising out of or incidental to the installation, operation, repair or replacement, or use of the controlled access.",
+            "issue": "Covenant not to sue owner over controlled access operation or repair",
+            "statute_citation": "14 DCMR § 304.3"
+          },
+          "stage": "generator",
+          "lease_text_score": 1.0,
+          "lease_text_offset": 180089
+        },
+        {
+          "gt": {
+            "line": 7,
+            "clause_excerpt": "In the event Manager is found liable for any loss or injury as a result of Manager’s installation or use of the controlled access, notwithstanding Resident(s) express waiver of Manager’s responsibility with respect to the controlled access, Resident(s) agree to waive and relinquish all rights to proceed against Manager except to the extent of Manager’s interest in the Property of which Resident(s) unit is a part.",
+            "issue": "Caps owner liability at its interest in the property",
+            "statute_citation": "14 DCMR § 304.3"
+          },
+          "stage": "generator",
+          "lease_text_score": 1.0,
+          "lease_text_offset": 180923
+        }
+      ],
+      "false_alarms": [
+        {
+          "flag": {
+            "index": 1,
+            "severity": "REVIEW WITH ATTORNEY",
+            "title": "Casualty loss liability waiver for bodily injury and property damage",
+            "clause": "\"We're not liable to any tenant, occupant, guest or visitor for bodily injury or death, or damage or loss of personal property from any cause, including but not limited to: fire, smoke, rain, flood, water and pipe leaks, hail, ice, snow, lightning, wind, explosions, interruption of utilities, theft, or vandalism unless due to our negligence.\"",
+            "law": "\"No owner shall cause to be placed in a lease or rental agreement any provision exempting the owner or premises from liability or limiting the liability of the owner or the residential premises from damages for injuries to persons or property caused by or resulting from the negligence of the owner (or the owner's agents, servants, or employees) in the operation, care, or maintenance of the leased premises, or any facility upon or portion of the property of which the leased premises are a part.\"",
+            "source": "14 DCMR § 304.3",
+            "why": "A broad waiver of liability for injury or death from fire, flood, water leaks, and utility interruption is the precise type of exculpatory lease provision DC regulations declare void and unenforceable.",
+            "verdict": "APPROVE"
+          },
+          "closest_gt_score": 0.044,
+          "closest_gt_line": 5,
+          "triage": "reviewed_and_judged_lawful"
+        },
+        {
+          "flag": {
+            "index": 2,
+            "severity": "REVIEW WITH ATTORNEY",
+            "title": "As is\" acceptance of the apartment and fixtures",
+            "clause": "\"You accept the Apartment, fixtures, and furniture as is, except for conditions required by law to be fixed by us.\"",
+            "law": "\"There shall be deemed to be included in the terms of any lease or rental agreement covering a habitation an implied warranty that the owner will maintain the premises in compliance with this subtitle.\"",
+            "source": "14 DCMR § 301.1",
+            "why": "An \"as is\" acceptance of the unit and its fixtures conflicts with the non-waivable implied warranty of habitability that requires the landlord to maintain the premises in code compliance throughout the tenancy.",
+            "verdict": "APPROVE"
+          },
+          "closest_gt_score": 0.0,
+          "closest_gt_line": null,
+          "triage": "reviewed_and_judged_lawful"
+        }
+      ],
+      "flags_on_arguable_clauses": [
+        {
+          "flag": {
+            "index": 0,
+            "severity": "REVIEW WITH ATTORNEY",
+            "title": "Landlord liability disclaimer for fire, water, pipe leaks, and utility failures",
+            "clause": "\"We do not maintain insurance to cover your personal property or personal injury. We are not responsible to any tenant, guest, or occupant for damage or loss of personal property or personal injury from (including but not limited to) fire, smoke, rain, flood, water and pipe leaks, hail, ice, snow, lightning, wind, explosions, earthquake, interruption of utilities, theft, hurricane, negligence of other tenants, occupants, or invited/uninvited guests or vandalism unless otherwise required by law.\"",
+            "law": "\"No owner shall cause to be placed in a lease or rental agreement any provision exempting the owner or premises from liability or limiting the liability of the owner or the residential premises from damages for injuries to persons or property caused by or resulting from the negligence of the owner (or the owner's agents, servants, or employees) in the operation, care, or maintenance of the leased premises, or any facility upon or portion of the property of which the leased premises are a part.\"",
+            "source": "14 DCMR § 304.3",
+            "why": "This clause purports to eliminate landlord responsibility for maintenance-related harms such as pipe leaks, flooding, and utility interruptions, which DC regulations expressly prohibit in a residential lease.",
+            "verdict": "APPROVE"
+          },
+          "arguable": {
+            "line": 3,
+            "clause_excerpt": "We are not responsible to any tenant, guest, or occupant for damage or loss of personal property or personal injury from (including but not limited to) fire, smoke, rain, flood, water and pipe leaks, hail, ice, snow, lightning, wind, explosions, earthquake, interruption of utilities, theft, hurricane, negligence of other tenants, occupants, or invited/uninvited guests or vandalism unless otherwise required by law.",
+            "issue": "Blanket non-liability for leaks, utility interruptions and other causes",
+            "statute_citation": "14 DCMR § 304.3"
+          },
+          "score": 1.0
+        }
+      ],
+      "borderline": []
+    },
+    {
+      "lease_file": "DC-2",
+      "jurisdiction": "DC",
+      "gt_clauses": 4,
+      "flags": 5,
+      "tp": 1,
+      "fp": 1,
+      "fn": 3,
+      "on_arguable": 3,
+      "hits": [
+        {
+          "gt": {
+            "line": 10,
+            "clause_excerpt": "you, on behalf of yourself and your family members, minor children and guests, assume all risk of bodily injury, death and property damage (\"Claims\") and agree to hold harmless, indemnify and defend Owner and its Management Agent and their employees, successors, or assigns against any and all such Claims and attorneys' fees arising directly or indirectly from any such occurrences in or about the Facilities.",
+            "issue": "Tenant assumes all risk and releases owner for facility injuries",
+            "statute_citation": "14 DCMR § 304.3; 14 DCMR § 304.4"
+          },
+          "flag": {
+            "index": 3,
+            "severity": "REVIEW WITH ATTORNEY",
+            "title": "Blanket waiver of liability and indemnity for amenity and common-area injuries",
+            "clause": "\"you, on behalf of yourself and your family members, minor children and guests, assume all risk of bodily injury, death and property damage (\\\"Claims\\\") and agree to hold harmless, indemnify and defend Owner and its Management Agent and their employees, successors, or assigns against any and all such Claims and attorneys' fees arising directly or indirectly from any such occurrences in or about the Facilities.\"",
+            "law": "\"Certain lease clauses are prohibited, including waiver of landlord liability for failing to properly maintain the property.\"",
+            "source": "DC Tenant Bill of Rights, Page 1",
+            "why": "This provision waives claims for injury or death in the pool, fitness center, and other common facilities — including injuries caused by the landlord's failure to maintain them — and also forces the tenant to pay the landlord's attorneys' fees.",
+            "verdict": "APPROVE"
+          },
+          "score": 1.0,
+          "citation_correct": false
+        }
+      ],
+      "misses": [
+        {
+          "gt": {
+            "line": 8,
+            "clause_excerpt": "Eviction. If you fail to pay rent, or any other charge hereunder otherwise defined as rent, we or our agents/attorney(s) may forthwith file a non-payment suit for possession of the Apartment.",
+            "issue": "Permits immediate nonpayment suit without statutory pre-filing notice or $600 threshold",
+            "statute_citation": "D.C. Code § 42-3505.01(a-1)(1)"
+          },
+          "stage": "generator",
+          "lease_text_score": 0.938,
+          "lease_text_offset": 42467
+        },
+        {
+          "gt": {
+            "line": 9,
+            "clause_excerpt": "Tenant agrees that Owner does not accept responsibility or liability for any lost, damaged, or unordered deliveries, and agrees to hold Owner harmless for the same.",
+            "issue": "Owner disclaims all liability for lost or damaged packages",
+            "statute_citation": "14 DCMR § 304.3"
+          },
+          "stage": "generator",
+          "lease_text_score": 1.0,
+          "lease_text_offset": 116922
+        },
+        {
+          "gt": {
+            "line": 11,
+            "clause_excerpt": "Management and the Service Provider are not liable for any loss or damage Resident may incur due to outages, interruptions, or fluctuations in services or damage or theft of packages unless such loss or damage is directly and proximately caused by Management's or the Service Provider’s gross negligence.",
+            "issue": "Limits package facility liability to gross negligence, exempting ordinary negligence",
+            "statute_citation": "14 DCMR § 304.3"
+          },
+          "stage": "generator",
+          "lease_text_score": 1.0,
+          "lease_text_offset": 158291
+        }
+      ],
+      "false_alarms": [
+        {
+          "flag": {
+            "index": 1,
+            "severity": "REVIEW WITH ATTORNEY",
+            "title": "As is\" acceptance of the apartment and fixtures",
+            "clause": "\"You accept the Apartment, fixtures, and furniture as is, except for conditions required by law to be fixed by us.\"",
+            "law": "\"The landlord must maintain your apartment and all common areas of the building in compliance with the housing code, including keeping the premises safe and secure and free of rodents and pests, keeping the structure and facilities of the building in good repair, and ensuring adequate heat, lighting, and ventilation.\"",
+            "source": "DC Tenant Bill of Rights, Page 2",
+            "why": "An \"as is\" acceptance can be read to shift the burden of pre-existing defects onto the tenant, while DC law imposes a non-waivable duty on the landlord to deliver and maintain a unit in compliance with the housing code.",
+            "verdict": "APPROVE"
+          },
+          "closest_gt_score": 0.0,
+          "closest_gt_line": null,
+          "triage": "reviewed_and_judged_lawful"
+        }
+      ],
+      "flags_on_arguable_clauses": [
+        {
+          "flag": {
+            "index": 0,
+            "severity": "REVIEW WITH ATTORNEY",
+            "title": "Waiver of landlord liability for fire, water, pipe leaks, and utility failures",
+            "clause": "\"We do not maintain insurance to cover your personal property or personal injury. We are not responsible to any tenant, guest, or occupant for damage or loss of personal property or personal injury from (including but not limited to) fire, smoke, rain, flood, water and pipe leaks, hail, ice, snow, lightning, wind, explosions, earthquake, interruption of utilities, theft, hurricane, negligence of other tenants, occupants, or invited/uninvited guests or vandalism unless otherwise required by law.\"",
+            "law": "\"Certain lease clauses are prohibited, including waiver of landlord liability for failing to properly maintain the property.\"",
+            "source": "DC Tenant Bill of Rights, Page 1",
+            "why": "This clause purports to release the landlord from responsibility for injury and property loss caused by maintenance-related conditions such as pipe leaks, flooding, and utility interruptions. DC prohibits lease clauses waiving landlord liability for failure to properly maintain the property, so the tenant may retain claims the lease appears to eliminate.",
+            "verdict": "APPROVE"
+          },
+          "arguable": {
+            "line": 39,
+            "clause_excerpt": "We are not responsible to any tenant, guest, or occupant for damage or loss of personal property or personal injury from (including but not limited to) fire, smoke, rain, flood, water and pipe leaks, hail, ice, snow, lightning, wind, explosions, earthquake, interruption of utilities, theft, hurricane, negligence of other tenants, occupants, or invited/uninvited guests or vandalism unless otherwise required by law.",
+            "issue": "Broad non-liability for leaks and utility interruptions, no negligence carve-out",
+            "statute_citation": "14 DCMR § 304.3"
+          },
+          "score": 1.0
+        },
+        {
+          "flag": {
+            "index": 2,
+            "severity": "REVIEW WITH ATTORNEY",
+            "title": "Tenant required to pay landlord's court costs as \"rent\"",
+            "clause": "\"You will reimburse us for all court costs we incur as a result of any legal action we bring against you for breach of this Lease, as awarded by the court. Such costs will be considered rent.\"",
+            "law": "\"Certain lease clauses are prohibited, including waiver of landlord liability for failing to properly maintain the property.\"",
+            "source": "14 DCMR § 304",
+            "why": "Recharacterizing the landlord's litigation costs as \"rent\" could allow a nonpayment eviction action over disputed legal expenses rather than actual rent. Fee- and cost-shifting provisions against tenants are restricted under DC housing regulations.",
+            "verdict": "APPROVE"
+          },
+          "arguable": {
+            "line": 50,
+            "clause_excerpt": "You will reimburse us for all court costs we incur as a result of any legal action we bring against you for breach of this Lease, as awarded by the court. Such costs will be considered rent.",
+            "issue": "Requires tenant to pay owner's court costs, which are treated as rent",
+            "statute_citation": "14 DCMR § 304.4"
+          },
+          "score": 1.0
+        },
+        {
+          "flag": {
+            "index": 4,
+            "severity": "CAUTION",
+            "title": "Waiver of habitability, rent offset, and quiet enjoyment claims in mixed-use building",
+            "clause": "\"You agree that any inconvenience associated with the mixed-use and/or the surrounding area, such as, but not limited to, those disclosed herein, will not be deemed to give you any offset to rent obligations, nor will they be the basis for a complaint against us for rent relief, constructive eviction, fitness and habitability, peaceful and quiet enjoyment, nuisance, or any other claim, right or remedy.\"",
+            "law": "\"The landlord must ensure that your unit and all common areas are safe and sanitary as of the first day of your tenancy.  This is known as the \\\"warranty of habitability.\\\"\"",
+            "source": "DC Tenant Bill of Rights, Page 2",
+            "why": "The clause asks the tenant to give up habitability, quiet enjoyment, and rent-offset remedies in advance, which conflicts with the statutory warranty of habitability; its practical scope is ambiguous because it is framed around \"inconvenience\" from neighboring businesses.",
+            "verdict": "APPROVE"
+          },
+          "arguable": {
+            "line": 61,
+            "clause_excerpt": "You agree that any inconvenience associated with the mixed-use and/or the surrounding area, such as, but not limited to, those disclosed herein, will not be deemed to give you any offset to rent obligations, nor will they be the basis for a complaint against us for rent relief, constructive eviction, fitness and habitability, peaceful and quiet enjoyment, nuisance, or any other claim, right or remedy.",
+            "issue": "Waives habitability and quiet enjoyment claims for commercial neighbor nuisances",
+            "statute_citation": "14 DCMR § 304.1"
+          },
+          "score": 1.0
+        }
+      ],
+      "borderline": []
+    },
+    {
+      "lease_file": "VA-1",
+      "jurisdiction": "VA",
+      "gt_clauses": 8,
+      "flags": 5,
+      "tp": 2,
+      "fp": 1,
+      "fn": 6,
+      "on_arguable": 2,
+      "hits": [
+        {
+          "gt": {
+            "line": 12,
+            "clause_excerpt": "The Landlord and/or the Association shall not be liable for any injury, damage, or loss resulting from any accident or occurrence in or upon the Premises.",
+            "issue": "Blanket exculpation of landlord for any injury, damage or loss",
+            "statute_citation": "Va. Code § 55.1-1208(A)(5)"
+          },
+          "flag": {
+            "index": 1,
+            "severity": "REVIEW WITH ATTORNEY",
+            "title": "Liability disclaimer for occurrences on the Premises",
+            "clause": "\"The Landlord and/or the Association shall not be liable for any injury, damage, or loss resulting from any accident or occurrence in or upon the Premises.\"",
+            "law": "\"A lease cannot give up a tenantʼs rights under the law.\"",
+            "source": "Virginia Residential Landlord and Tenant Act, § 55.1-1204",
+            "why": "A total disclaimer of liability for any accident or occurrence on the premises, including common areas and facilities, would strip the tenant of remedies the statute preserves.",
+            "verdict": "APPROVE"
+          },
+          "score": 1.0,
+          "citation_correct": false
+        },
+        {
+          "gt": {
+            "line": 16,
+            "clause_excerpt": "Any fixture or appliance provided in “As Is” condition need not be repaired, replaced or maintained by the Landlord. Those items listed “As Is” are provided in as is, where is condition, with any existing faults.",
+            "issue": "Landlord disclaims duty to maintain or repair As Is appliances",
+            "statute_citation": "Va. Code § 55.1-1220(A)(4); § 55.1-1208(A)(1)"
+          },
+          "flag": {
+            "index": 2,
+            "severity": "REVIEW WITH ATTORNEY",
+            "title": "As is\" disclaimer of landlord's duty to repair fixtures and appliances",
+            "clause": "\"Any fixture or appliance provided in “As Is” condition need not be repaired, replaced or maintained by the Landlord. Those items listed “As Is” are provided in as is, where is condition, with any existing faults. Landlord will have no duty to maintain or repair such items.\"",
+            "law": "\"Fit and Habitable Premises: A tenant has the right to a fit and habitable rental unit in accordance with the Uniform Statewide Building Code. The landlord must make all repairs needed to keep premises fit and habitable. (§55.1-1220)\"",
+            "source": "Virginia Residential Landlord and Tenant Act, § 55.1-1234",
+            "why": "The lease purports to remove the landlord's maintenance and repair duty for fixtures and appliances, which conflicts with the statutory obligation to keep the premises fit and habitable.",
+            "verdict": "APPROVE"
+          },
+          "score": 1.0,
+          "citation_correct": true
+        }
+      ],
+      "misses": [
+        {
+          "gt": {
+            "line": 13,
+            "clause_excerpt": "All of Tenant's personal property located or stored at the Premises shall be at Tenant's sole risk. The Tenant shall indemnify and hold harmless the Landlord from any loss or damage to such personal property.",
+            "issue": "Tenant must indemnify landlord for any loss to tenant's property",
+            "statute_citation": "Va. Code § 55.1-1208(A)(5)"
+          },
+          "stage": "generator",
+          "lease_text_score": 1.0,
+          "lease_text_offset": 14320
+        },
+        {
+          "gt": {
+            "line": 14,
+            "clause_excerpt": "If any material facts in the Application are untrue, the Landlord shall have the right to immediately declare that Tenant is in default under this Lease and terminate the Lease without any further notice or cure period",
+            "issue": "Termination for application misstatement without statutory notice",
+            "statute_citation": "Va. Code § 55.1-1245(C); § 55.1-1208(A)(1)"
+          },
+          "stage": "generator",
+          "lease_text_score": 1.0,
+          "lease_text_offset": 16574
+        },
+        {
+          "gt": {
+            "line": 15,
+            "clause_excerpt": "E. Re-keying locks, installing additional locks or security systems. The Tenant must provide the Landlord, and the Association where required, with a duplicate of all keys and instructions on how to operate all locks and/or systems.",
+            "issue": "Landlord consent required to install security systems",
+            "statute_citation": "Va. Code § 55.1-1229(D); § 55.1-1208(A)(1)"
+          },
+          "stage": "generator",
+          "lease_text_score": 1.0,
+          "lease_text_offset": 27664
+        },
+        {
+          "gt": {
+            "line": 17,
+            "clause_excerpt": "M. Providing notification to Landlord if Tenant intends to be absent from Premises for more than 14 days. If Tenant fails to notify Landlord, Landlord may consider Premises abandoned.",
+            "issue": "Failure to report absence lets landlord deem premises abandoned",
+            "statute_citation": "Va. Code § 55.1-1249; § 55.1-1208(A)(1)"
+          },
+          "stage": "generator",
+          "lease_text_score": 1.0,
+          "lease_text_offset": 35388
+        },
+        {
+          "gt": {
+            "line": 18,
+            "clause_excerpt": "If Landlord determines that Premises are uninhabitable, Lease shall automatically terminate.",
+            "issue": "Automatic termination after casualty skips 14-day notice",
+            "statute_citation": "Va. Code § 55.1-1240; § 55.1-1208(A)(1)"
+          },
+          "stage": "generator",
+          "lease_text_score": 1.0,
+          "lease_text_offset": 54583
+        },
+        {
+          "gt": {
+            "line": 19,
+            "clause_excerpt": "If Landlord is required to make any payment to Tenant hereunder, Tenant agrees that such financial obligation will be satisfied solely from Landlord’s estate and interest in the Premises and the real estate upon which the Premises is situated and the improvements of which it is part, or the proceeds thereof, so that Landlord will incur no individual or other liability for such financial obligations.",
+            "issue": "Landlord's liability to tenant limited to its interest in property",
+            "statute_citation": "Va. Code § 55.1-1208(A)(5)"
+          },
+          "stage": "generator",
+          "lease_text_score": 1.0,
+          "lease_text_offset": 56217
+        }
+      ],
+      "false_alarms": [
+        {
+          "flag": {
+            "index": 3,
+            "severity": "REVIEW WITH ATTORNEY",
+            "title": "Tenant pays landlord's attorney fees and enforcement costs",
+            "clause": "\"Tenant shall pay all costs, expenses, fees, and charges incurred by Landlord in enforcing, by legal action or otherwise, any of the provisions of Lease, including the payment of reasonable attorneys’ fees, and Tenant hereby waives the benefit of any homestead or similar exemption laws with respect to the obligations of Lease.\"",
+            "law": "\"A lease cannot give up a tenantʼs rights under the law.\"",
+            "source": "Virginia Residential Landlord and Tenant Act, § 55.1-1204",
+            "why": "Automatic fee shifting for any enforcement effort, even without a lawsuit, plus a waiver of exemption laws, can expose the tenant to substantial charges beyond what the statute permits.",
+            "verdict": "APPROVE"
+          },
+          "closest_gt_score": 0.0,
+          "closest_gt_line": null,
+          "triage": "reviewed_and_judged_lawful"
+        }
+      ],
+      "flags_on_arguable_clauses": [
+        {
+          "flag": {
+            "index": 0,
+            "severity": "REVIEW WITH ATTORNEY",
+            "title": "Blanket casualty/maintenance liability waiver",
+            "clause": "\"Casualty Loss Neither Landlord nor Manager are liable to any resident, guest, or occupant for personal injury or damage or loss of personal property from any cause, including but not limited to: fire, smoke, rain, flood, water and pipe leaks, hail, ice, snow, lightning, wind, explosions, earthquake, interruption of utilities, theft, or vandalism unless otherwise required by law.\"",
+            "law": "\"A lease cannot give up a tenantʼs rights under the law.\"",
+            "source": "Virginia Residential Landlord and Tenant Act, § 55.1-1204",
+            "why": "This clause attempts to eliminate landlord liability for injury or property damage from maintenance-related causes such as fire, flood, pipe leaks, and utility interruptions, which a lease may not validly waive.",
+            "verdict": "APPROVE"
+          },
+          "arguable": {
+            "line": 75,
+            "clause_excerpt": "Neither Landlord nor Manager are liable to any resident, guest, or occupant for personal injury or damage or loss of personal property from any cause, including but not limited to: fire, smoke, rain, flood, water and pipe leaks, hail, ice, snow, lightning, wind, explosions, earthquake, interruption of utilities, theft, or vandalism unless otherwise required by law.",
+            "issue": "Landlord not liable for injury or property loss from any cause",
+            "statute_citation": "Va. Code § 55.1-1208(A)(5)"
+          },
+          "score": 1.0
+        },
+        {
+          "flag": {
+            "index": 4,
+            "severity": "REVIEW WITH ATTORNEY",
+            "title": "Rent payable without deduction or offset (repair-and-deduct waiver)",
+            "clause": "\"Regular Monthly Installments. The charges below shall be paid in advance of the first (1st) day of each month after the first full month of the Term without notice, demand, deduction or offset.\"",
+            "law": "\"Repair and Deduct: If an issue on the property affects life, health, safety, or seriously affects habitability, and a landlord has not begun to address it within 14 days after written notice from the tenant, the tenant may contract to have the repair done by a licensed contractor at a cost of not more than $1,500, or one monthʼs rent, whichever is more. The tenant may deduct the actual cost of the repair from the rent.\"",
+            "source": "Virginia Residential Landlord and Tenant Act, § 55.1-1244.1",
+            "why": "Requiring rent \"without deduction or offset\" conflicts with the tenant's statutory right to deduct the cost of qualifying repairs from rent.",
+            "verdict": "APPROVE"
+          },
+          "arguable": {
+            "line": 70,
+            "clause_excerpt": "Regular Monthly Installments. The charges below shall be paid in advance of the first (1st) day of each month after the first full month of the Term without notice, demand, deduction or offset.",
+            "issue": "Rent payable without deduction may waive repair-and-deduct right",
+            "statute_citation": "Va. Code § 55.1-1244.1(C); § 55.1-1208(A)(1)"
+          },
+          "score": 1.0
+        }
+      ],
+      "borderline": []
+    },
+    {
+      "lease_file": "VA-2",
+      "jurisdiction": "VA",
+      "gt_clauses": 7,
+      "flags": 4,
+      "tp": 1,
+      "fp": 2,
+      "fn": 6,
+      "on_arguable": 1,
+      "hits": [
+        {
+          "gt": {
+            "line": 21,
+            "clause_excerpt": "You release us from any and all such claims and waive any claims for offset or reduction of rent or diminished rental value of the dwelling due to such outages, interruptions, or fluctuations.",
+            "issue": "Waives diminished rental value claims for utility outages",
+            "statute_citation": "Va. Code § 55.1-1208(A)(1); § 55.1-1239(A)(1)"
+          },
+          "flag": {
+            "index": 3,
+            "severity": "REVIEW WITH ATTORNEY",
+            "title": "Waiver of claims and rent offset for utility outages and interruptions",
+            "clause": "\"We are not liable for any losses or damages you incur as a result of outages, interruptions, or fluctuations in utility services provided to the dwelling unless such loss or damage was the direct result of negligence by us or our employees. You release us from any and all such claims and waive any claims for offset or reduction of rent or diminished rental value of the dwelling due to such outages, interruptions, or fluctuations.\"",
+            "law": "\"\\\"Essential service\\\" includes heat, running water, hot water, electricity, and gas.\"",
+            "source": "Virginia Residential Landlord and Tenant Act, § 55.1-1204",
+            "why": "This clause disclaims landlord liability for failures of essential utility services and simultaneously strips the tenant of statutory remedies such as rent offset, which a lease may not lawfully waive.",
+            "verdict": "APPROVE"
+          },
+          "score": 1.0,
+          "citation_correct": false
+        }
+      ],
+      "misses": [
+        {
+          "gt": {
+            "line": 20,
+            "clause_excerpt": "We will provide you with notice of the time and date of the inspection at least ten (10) days before the date of the inspection. The inspection will be made within three (3) days (excluding Saturdays, Sundays and holidays) after delivery of possession.",
+            "issue": "Move-out inspection window exceeds statutory 72 hours",
+            "statute_citation": "Va. Code § 55.1-1226(G)"
+          },
+          "stage": "generator",
+          "lease_text_score": 0.846,
+          "lease_text_offset": 68217
+        },
+        {
+          "gt": {
+            "line": 22,
+            "clause_excerpt": "Utility billing methods and the existence or amount of any fees or flat rates may be changed at any time with a 30 day notice to Residents.",
+            "issue": "Landlord may change utility fees and billing methods by notice alone",
+            "statute_citation": "Va. Code § 55.1-1204(I); § 55.1-1212(C)"
+          },
+          "stage": "generator",
+          "lease_text_score": 1.0,
+          "lease_text_offset": 86256
+        },
+        {
+          "gt": {
+            "line": 23,
+            "clause_excerpt": "As such, you waive any and all claims against us that arise out of or are in any way related to lights, noises, sounds, vibrations, smoke, odors or any other inconvenience that may be caused by commercial businesses within the mixed-use area and/or their guests.",
+            "issue": "Blanket waiver of all claims against landlord for mixed-use conditions",
+            "statute_citation": "Va. Code § 55.1-1208(A)(5)"
+          },
+          "stage": "generator",
+          "lease_text_score": 1.0,
+          "lease_text_offset": 122188
+        },
+        {
+          "gt": {
+            "line": 24,
+            "clause_excerpt": "You, your guests, family, invitees, and agents hereby waive any and all claims against us or our agents of any nature regarding or relating to any package or item received by us, including but not limited to, claims for theft, misplacing or damaging any such package, except in the event of our or our agent’s gross negligence or willful misconduct.",
+            "issue": "Package waiver exempts landlord's ordinary negligence",
+            "statute_citation": "Va. Code § 55.1-1208(A)(5)"
+          },
+          "stage": "generator",
+          "lease_text_score": 0.898,
+          "lease_text_offset": 130653
+        },
+        {
+          "gt": {
+            "line": 25,
+            "clause_excerpt": "Resident agrees that Owner may change the amounts described above based on market conditions or for any other reason by providing written notice of the new fees, rent, or other charges.",
+            "issue": "Landlord may change rent and fees by written notice alone",
+            "statute_citation": "Va. Code § 55.1-1204(I)"
+          },
+          "stage": "generator",
+          "lease_text_score": 1.0,
+          "lease_text_offset": 220120
+        },
+        {
+          "gt": {
+            "line": 26,
+            "clause_excerpt": "Resident hereby waives any legal action against Owner for providing information to governmental authorities, including law enforcement and census takers, and for allowing law enforcement to enter the Premises, in the event the grounds for the warrant or for the warrantless entry are not upheld by the adjudicating court of law.",
+            "issue": "Waives all claims for unlawful police entry and disclosures",
+            "statute_citation": "Va. Code § 55.1-1208(A)(5); § 55.1-1229(C); § 55.1-1210"
+          },
+          "stage": "generator",
+          "lease_text_score": 1.0,
+          "lease_text_offset": 266172
+        }
+      ],
+      "false_alarms": [
+        {
+          "flag": {
+            "index": 2,
+            "severity": "REVIEW WITH ATTORNEY",
+            "title": "Tenant required to pay landlord's attorney fees and court costs",
+            "clause": "\"the Owner shall be entitled to recover from the Resident the following, regardless of whether a lawsuit is filed or an order is obtained from a court: (i) rent due and owing as contracted for in the Lease Contract, (ii) other charges and fees as contracted for in the Lease Contract, (iii) late charges contracted for in the Lease Contract, (iv) reasonable attorneys’ fees incurred by Owner, (v) costs of the proceeding as contracted for in the Lease Contract or as provided by law only if court action has been filed\"",
+            "law": "\"\\\"Action\\\" means any recoupment, counterclaim, setoff, or other civil action and any other proceeding in which rights are determined, including actions for possession, rent, unlawful detainer, unlawful entry, and distress for rent.\"",
+            "source": "Virginia Residential Landlord and Tenant Act, § 55.1-1204",
+            "why": "Fee-shifting provisions that obligate the tenant to pay the landlord's attorney fees and enforcement costs — here even without any court action — are restricted under the VRLTA and can expose the tenant to substantial unanticipated costs.",
+            "verdict": "APPROVE"
+          },
+          "closest_gt_score": 0.0,
+          "closest_gt_line": null,
+          "triage": "adjudicated_not_a_violation"
+        },
+        {
+          "flag": {
+            "index": 4,
+            "severity": "REVIEW WITH ATTORNEY",
+            "title": "Waiver of all claims arising from use of common areas and amenities",
+            "clause": "\"Resident (“You”) expressly agrees to assume all risks of every type, including but not limited to risks of personal injury or property damage, of whatever nature or severity, including incidents leading to or causing death, that are causally related to your use of common areas or amenities at the Community (including the gym, pool, clubroom, roof areas, lobby, elevators, and entryways). You agree to hold Owner and Manager harmless and to release and to waive any and all claims\"",
+            "law": "\"\\\"Premises\\\" means a dwelling unit and the structure of which it is a part, facilities and appurtenances contained therein, and grounds, areas, and facilities held out for the use of tenants generally or whose use is promised to the tenant.\"",
+            "source": "Virginia Residential Landlord and Tenant Act, § 55.1-1204",
+            "why": "Common areas and amenities are part of the \"premises\" the landlord must maintain, and a blanket waiver of liability for injuries occurring there may be unenforceable and could cause the tenant to abandon a legitimate injury claim.",
+            "verdict": "APPROVE"
+          },
+          "closest_gt_score": 0.102,
+          "closest_gt_line": 24,
+          "triage": "reviewed_and_judged_lawful"
+        }
+      ],
+      "flags_on_arguable_clauses": [
+        {
+          "flag": {
+            "index": 0,
+            "severity": "REVIEW WITH ATTORNEY",
+            "title": "Blanket waiver of landlord liability for fire, water, pipe leaks, and utility interruption",
+            "clause": "\"Casualty Loss. We’re not liable to any resident, guest, or occupant for personal injury or damage or loss of personal property from any cause, including but not limited to: fire, smoke, rain, flood, water and pipe leaks, hail, ice, snow, lightning, wind, explosions, earthquake, interruption of utilities, theft, or vandalism unless otherwise required by law.\"",
+            "law": "\"\\\"Premises\\\" means a dwelling unit and the structure of which it is a part, facilities and appurtenances contained therein, and grounds, areas, and facilities held out for the use of tenants generally or whose use is promised to the tenant.\"",
+            "source": "Virginia Residential Landlord and Tenant Act, § 55.1-1204",
+            "why": "A lease provision purporting to relieve the landlord of liability for personal injury or property damage arising from maintenance-related causes such as fire, water and pipe leaks, or utility interruption is unenforceable under the VRLTA, and relying on it could cause the tenant to forgo a valid claim.",
+            "verdict": "APPROVE"
+          },
+          "arguable": {
+            "line": 92,
+            "clause_excerpt": "We’re not liable to any resident, guest, or occupant for personal injury or damage or loss of personal property from any cause, including but not limited to: fire, smoke, rain, flood, water and pipe leaks, hail, ice, snow, lightning, wind, explosions, earthquake, interruption of utilities, theft, or vandalism unless otherwise required by law.",
+            "issue": "Casualty loss clause disclaims liability from any cause",
+            "statute_citation": "Va. Code § 55.1-1208(A)(5)"
+          },
+          "score": 1.0
+        }
+      ],
+      "borderline": []
+    }
+  ],
+  "pipeline_runs": [
+    {
+      "lease_file": "DC-1",
+      "jurisdiction": "DC",
+      "text_sha256": "b5ee69808c909e5c64365fd8315970d4ec2e9c14c760be558ea989a828d1ca3f",
+      "chars": 266105,
+      "pages": 93,
+      "generator_raw": "**[REVIEW WITH ATTORNEY]** — Landlord liability disclaimer for fire, water, pipe leaks, and utility failures (may violate DC law per the reference)\n**Clause:** \"We do not maintain insurance to cover your personal property or personal injury. We are not responsible to any tenant, guest, or occupant for damage or loss of personal property or personal injury from (including but not limited to) fire, smoke, rain, flood, water and pipe leaks, hail, ice, snow, lightning, wind, explosions, earthquake, interruption of utilities, theft, hurricane, negligence of other tenants, occupants, or invited/uninvited guests or vandalism unless otherwise required by law.\"\n**DC Law:** \"No owner shall cause to be placed in a lease or rental agreement any provision exempting the owner or premises from liability or limiting the liability of the owner or the residential premises from damages for injuries to persons or property caused by or resulting from the negligence of the owner (or the owner's agents, servants, or employees) in the operation, care, or maintenance of the leased premises, or any facility upon or portion of the property of which the leased premises are a part.\"\n**Source:** 14 DCMR § 304.3\n**Why it matters:** This clause purports to eliminate landlord responsibility for maintenance-related harms such as pipe leaks, flooding, and utility interruptions, which DC regulations expressly prohibit in a residential lease.\n\n**[REVIEW WITH ATTORNEY]** — Casualty loss liability waiver for bodily injury and property damage (may violate DC law per the reference)\n**Clause:** \"We're not liable to any tenant, occupant, guest or visitor for bodily injury or death, or damage or loss of personal property from any cause, including but not limited to: fire, smoke, rain, flood, water and pipe leaks, hail, ice, snow, lightning, wind, explosions, interruption of utilities, theft, or vandalism unless due to our negligence.\"\n**DC Law:** \"No owner shall cause to be placed in a lease or rental agreement any provision exempting the owner or premises from liability or limiting the liability of the owner or the residential premises from damages for injuries to persons or property caused by or resulting from the negligence of the owner (or the owner's agents, servants, or employees) in the operation, care, or maintenance of the leased premises, or any facility upon or portion of the property of which the leased premises are a part.\"\n**Source:** 14 DCMR § 304.3\n**Why it matters:** A broad waiver of liability for injury or death from fire, flood, water leaks, and utility interruption is the precise type of exculpatory lease provision DC regulations declare void and unenforceable.\n\n**[REVIEW WITH ATTORNEY]** — \"As is\" acceptance of the apartment and fixtures (may violate DC law per the reference)\n**Clause:** \"You accept the Apartment, fixtures, and furniture as is, except for conditions required by law to be fixed by us.\"\n**DC Law:** \"There shall be deemed to be included in the terms of any lease or rental agreement covering a habitation an implied warranty that the owner will maintain the premises in compliance with this subtitle.\"\n**Source:** 14 DCMR § 301.1\n**Why it matters:** An \"as is\" acceptance of the unit and its fixtures conflicts with the non-waivable implied warranty of habitability that requires the landlord to maintain the premises in code compliance throughout the tenancy.\n\n**[REVIEW WITH ATTORNEY]** — Tenant required to pay landlord's attorney's fees and litigation costs (may violate DC law per the reference)\n**Clause:** \"As owner of the animal, you're strictly liable for the entire amount of any injury that the animal causes to a person or anyone's property. You'll indemnify us for all costs of litigation and attorney's fees resulting from any such damage.\"\n**DC Law:** \"No owner shall place (or cause to be placed) in a lease or rental agreement a provision waiving the right of a tenant of residential premises to a jury trial, or requiring that the tenant pay the owner's court costs or legal fees, or authorizing a person other than the tenant to confess judgment against a tenant.\"\n**Source:** 14 DCMR § 304.4\n**Why it matters:** The lease shifts the landlord's litigation costs and attorney's fees onto the tenant by contract, which DC regulations prohibit; only a court may assess such fees in appropriate circumstances.\n\n**[REVIEW WITH ATTORNEY]** — Controlled access / common area liability waiver and covenant not to sue (may violate DC law per the reference)\n**Clause:** \"Resident(s) agrees the Manager is not liable to Resident(s), Resident(s) family, Resident(s) guests or other occupants for any injury, damage, or loss whatsoever which is caused as a result of any problem, defect, malfunction or failure of the performance of the controlled access.\"\n**DC Law:** \"No owner shall cause to be placed in a lease or rental agreement any provision exempting the owner or premises from liability or limiting the liability of the owner or the residential premises from damages for injuries to persons or property caused by or resulting from the negligence of the owner (or the owner's agents, servants, or employees) in the operation, care, or maintenance of the leased premises, or any facility upon or portion of the property of which the leased premises are a part.\"\n**Source:** 14 DCMR § 304.3\n**Why it matters:** The addendum disclaims all liability — and extracts a covenant not to sue — for injuries arising from a building access facility the landlord installs and maintains, which DC regulations render void.",
+      "generator_stop_reason": "end_turn",
+      "api_calls": 6,
+      "cached_calls": 0,
+      "candidates": [
+        {
+          "index": 0,
+          "judged": true,
+          "verdict": "APPROVE",
+          "approved": true,
+          "in_report": true,
+          "block": "**[REVIEW WITH ATTORNEY]** — Landlord liability disclaimer for fire, water, pipe leaks, and utility failures (may violate DC law per the reference)\n**Clause:** \"We do not maintain insurance to cover your personal property or personal injury. We are not responsible to any tenant, guest, or occupant for damage or loss of personal property or personal injury from (including but not limited to) fire, smoke, rain, flood, water and pipe leaks, hail, ice, snow, lightning, wind, explosions, earthquake, interruption of utilities, theft, hurricane, negligence of other tenants, occupants, or invited/uninvited guests or vandalism unless otherwise required by law.\"\n**DC Law:** \"No owner shall cause to be placed in a lease or rental agreement any provision exempting the owner or premises from liability or limiting the liability of the owner or the residential premises from damages for injuries to persons or property caused by or resulting from the negligence of the owner (or the owner's agents, servants, or employees) in the operation, care, or maintenance of the leased premises, or any facility upon or portion of the property of which the leased premises are a part.\"\n**Source:** 14 DCMR § 304.3\n**Why it matters:** This clause purports to eliminate landlord responsibility for maintenance-related harms such as pipe leaks, flooding, and utility interruptions, which DC regulations expressly prohibit in a residential lease.",
+          "severity": "REVIEW WITH ATTORNEY",
+          "title": "Landlord liability disclaimer for fire, water, pipe leaks, and utility failures",
+          "clause": "\"We do not maintain insurance to cover your personal property or personal injury. We are not responsible to any tenant, guest, or occupant for damage or loss of personal property or personal injury from (including but not limited to) fire, smoke, rain, flood, water and pipe leaks, hail, ice, snow, lightning, wind, explosions, earthquake, interruption of utilities, theft, hurricane, negligence of other tenants, occupants, or invited/uninvited guests or vandalism unless otherwise required by law.\"",
+          "law": "\"No owner shall cause to be placed in a lease or rental agreement any provision exempting the owner or premises from liability or limiting the liability of the owner or the residential premises from damages for injuries to persons or property caused by or resulting from the negligence of the owner (or the owner's agents, servants, or employees) in the operation, care, or maintenance of the leased premises, or any facility upon or portion of the property of which the leased premises are a part.\"",
+          "source": "14 DCMR § 304.3",
+          "why": "This clause purports to eliminate landlord responsibility for maintenance-related harms such as pipe leaks, flooding, and utility interruptions, which DC regulations expressly prohibit in a residential lease.",
+          "match_text": "\"We do not maintain insurance to cover your personal property or personal injury. We are not responsible to any tenant, guest, or occupant for damage or loss of personal property or personal injury from (including but not limited to) fire, smoke, rain, flood, water and pipe leaks, hail, ice, snow, lightning, wind, explosions, earthquake, interruption of utilities, theft, hurricane, negligence of other tenants, occupants, or invited/uninvited guests or vandalism unless otherwise required by law.\"",
+          "law_quote_score": 0.0
+        },
+        {
+          "index": 1,
+          "judged": true,
+          "verdict": "APPROVE",
+          "approved": true,
+          "in_report": true,
+          "block": "**[REVIEW WITH ATTORNEY]** — Casualty loss liability waiver for bodily injury and property damage (may violate DC law per the reference)\n**Clause:** \"We're not liable to any tenant, occupant, guest or visitor for bodily injury or death, or damage or loss of personal property from any cause, including but not limited to: fire, smoke, rain, flood, water and pipe leaks, hail, ice, snow, lightning, wind, explosions, interruption of utilities, theft, or vandalism unless due to our negligence.\"\n**DC Law:** \"No owner shall cause to be placed in a lease or rental agreement any provision exempting the owner or premises from liability or limiting the liability of the owner or the residential premises from damages for injuries to persons or property caused by or resulting from the negligence of the owner (or the owner's agents, servants, or employees) in the operation, care, or maintenance of the leased premises, or any facility upon or portion of the property of which the leased premises are a part.\"\n**Source:** 14 DCMR § 304.3\n**Why it matters:** A broad waiver of liability for injury or death from fire, flood, water leaks, and utility interruption is the precise type of exculpatory lease provision DC regulations declare void and unenforceable.",
+          "severity": "REVIEW WITH ATTORNEY",
+          "title": "Casualty loss liability waiver for bodily injury and property damage",
+          "clause": "\"We're not liable to any tenant, occupant, guest or visitor for bodily injury or death, or damage or loss of personal property from any cause, including but not limited to: fire, smoke, rain, flood, water and pipe leaks, hail, ice, snow, lightning, wind, explosions, interruption of utilities, theft, or vandalism unless due to our negligence.\"",
+          "law": "\"No owner shall cause to be placed in a lease or rental agreement any provision exempting the owner or premises from liability or limiting the liability of the owner or the residential premises from damages for injuries to persons or property caused by or resulting from the negligence of the owner (or the owner's agents, servants, or employees) in the operation, care, or maintenance of the leased premises, or any facility upon or portion of the property of which the leased premises are a part.\"",
+          "source": "14 DCMR § 304.3",
+          "why": "A broad waiver of liability for injury or death from fire, flood, water leaks, and utility interruption is the precise type of exculpatory lease provision DC regulations declare void and unenforceable.",
+          "match_text": "\"We're not liable to any tenant, occupant, guest or visitor for bodily injury or death, or damage or loss of personal property from any cause, including but not limited to: fire, smoke, rain, flood, water and pipe leaks, hail, ice, snow, lightning, wind, explosions, interruption of utilities, theft, or vandalism unless due to our negligence.\"",
+          "law_quote_score": 0.0
+        },
+        {
+          "index": 2,
+          "judged": true,
+          "verdict": "APPROVE",
+          "approved": true,
+          "in_report": true,
+          "block": "**[REVIEW WITH ATTORNEY]** — \"As is\" acceptance of the apartment and fixtures (may violate DC law per the reference)\n**Clause:** \"You accept the Apartment, fixtures, and furniture as is, except for conditions required by law to be fixed by us.\"\n**DC Law:** \"There shall be deemed to be included in the terms of any lease or rental agreement covering a habitation an implied warranty that the owner will maintain the premises in compliance with this subtitle.\"\n**Source:** 14 DCMR § 301.1\n**Why it matters:** An \"as is\" acceptance of the unit and its fixtures conflicts with the non-waivable implied warranty of habitability that requires the landlord to maintain the premises in code compliance throughout the tenancy.",
+          "severity": "REVIEW WITH ATTORNEY",
+          "title": "As is\" acceptance of the apartment and fixtures",
+          "clause": "\"You accept the Apartment, fixtures, and furniture as is, except for conditions required by law to be fixed by us.\"",
+          "law": "\"There shall be deemed to be included in the terms of any lease or rental agreement covering a habitation an implied warranty that the owner will maintain the premises in compliance with this subtitle.\"",
+          "source": "14 DCMR § 301.1",
+          "why": "An \"as is\" acceptance of the unit and its fixtures conflicts with the non-waivable implied warranty of habitability that requires the landlord to maintain the premises in code compliance throughout the tenancy.",
+          "match_text": "\"You accept the Apartment, fixtures, and furniture as is, except for conditions required by law to be fixed by us.\"",
+          "law_quote_score": 0.031
+        },
+        {
+          "index": 3,
+          "judged": true,
+          "verdict": "APPROVE",
+          "approved": true,
+          "in_report": true,
+          "block": "**[REVIEW WITH ATTORNEY]** — Tenant required to pay landlord's attorney's fees and litigation costs (may violate DC law per the reference)\n**Clause:** \"As owner of the animal, you're strictly liable for the entire amount of any injury that the animal causes to a person or anyone's property. You'll indemnify us for all costs of litigation and attorney's fees resulting from any such damage.\"\n**DC Law:** \"No owner shall place (or cause to be placed) in a lease or rental agreement a provision waiving the right of a tenant of residential premises to a jury trial, or requiring that the tenant pay the owner's court costs or legal fees, or authorizing a person other than the tenant to confess judgment against a tenant.\"\n**Source:** 14 DCMR § 304.4\n**Why it matters:** The lease shifts the landlord's litigation costs and attorney's fees onto the tenant by contract, which DC regulations prohibit; only a court may assess such fees in appropriate circumstances.",
+          "severity": "REVIEW WITH ATTORNEY",
+          "title": "Tenant required to pay landlord's attorney's fees and litigation costs",
+          "clause": "\"As owner of the animal, you're strictly liable for the entire amount of any injury that the animal causes to a person or anyone's property. You'll indemnify us for all costs of litigation and attorney's fees resulting from any such damage.\"",
+          "law": "\"No owner shall place (or cause to be placed) in a lease or rental agreement a provision waiving the right of a tenant of residential premises to a jury trial, or requiring that the tenant pay the owner's court costs or legal fees, or authorizing a person other than the tenant to confess judgment against a tenant.\"",
+          "source": "14 DCMR § 304.4",
+          "why": "The lease shifts the landlord's litigation costs and attorney's fees onto the tenant by contract, which DC regulations prohibit; only a court may assess such fees in appropriate circumstances.",
+          "match_text": "\"As owner of the animal, you're strictly liable for the entire amount of any injury that the animal causes to a person or anyone's property. You'll indemnify us for all costs of litigation and attorney's fees resulting from any such damage.\"",
+          "law_quote_score": 0.018
+        },
+        {
+          "index": 4,
+          "judged": true,
+          "verdict": "APPROVE",
+          "approved": true,
+          "in_report": true,
+          "block": "**[REVIEW WITH ATTORNEY]** — Controlled access / common area liability waiver and covenant not to sue (may violate DC law per the reference)\n**Clause:** \"Resident(s) agrees the Manager is not liable to Resident(s), Resident(s) family, Resident(s) guests or other occupants for any injury, damage, or loss whatsoever which is caused as a result of any problem, defect, malfunction or failure of the performance of the controlled access.\"\n**DC Law:** \"No owner shall cause to be placed in a lease or rental agreement any provision exempting the owner or premises from liability or limiting the liability of the owner or the residential premises from damages for injuries to persons or property caused by or resulting from the negligence of the owner (or the owner's agents, servants, or employees) in the operation, care, or maintenance of the leased premises, or any facility upon or portion of the property of which the leased premises are a part.\"\n**Source:** 14 DCMR § 304.3\n**Why it matters:** The addendum disclaims all liability — and extracts a covenant not to sue — for injuries arising from a building access facility the landlord installs and maintains, which DC regulations render void.",
+          "severity": "REVIEW WITH ATTORNEY",
+          "title": "Controlled access / common area liability waiver and covenant not to sue",
+          "clause": "\"Resident(s) agrees the Manager is not liable to Resident(s), Resident(s) family, Resident(s) guests or other occupants for any injury, damage, or loss whatsoever which is caused as a result of any problem, defect, malfunction or failure of the performance of the controlled access.\"",
+          "law": "\"No owner shall cause to be placed in a lease or rental agreement any provision exempting the owner or premises from liability or limiting the liability of the owner or the residential premises from damages for injuries to persons or property caused by or resulting from the negligence of the owner (or the owner's agents, servants, or employees) in the operation, care, or maintenance of the leased premises, or any facility upon or portion of the property of which the leased premises are a part.\"",
+          "source": "14 DCMR § 304.3",
+          "why": "The addendum disclaims all liability — and extracts a covenant not to sue — for injuries arising from a building access facility the landlord installs and maintains, which DC regulations render void.",
+          "match_text": "\"Resident(s) agrees the Manager is not liable to Resident(s), Resident(s) family, Resident(s) guests or other occupants for any injury, damage, or loss whatsoever which is caused as a result of any problem, defect, malfunction or failure of the performance of the controlled access.\"",
+          "law_quote_score": 0.0
+        }
+      ]
+    },
+    {
+      "lease_file": "DC-2",
+      "jurisdiction": "DC",
+      "text_sha256": "ffe27810554de5fd02fc020faa65ae845e8a3da7e240a43a98045129c730fbc7",
+      "chars": 203740,
+      "pages": 50,
+      "generator_raw": "**[REVIEW WITH ATTORNEY]** — Waiver of landlord liability for fire, water, pipe leaks, and utility failures (may violate DC law per the reference)\n**Clause:** \"We do not maintain insurance to cover your personal property or personal injury. We are not responsible to any tenant, guest, or occupant for damage or loss of personal property or personal injury from (including but not limited to) fire, smoke, rain, flood, water and pipe leaks, hail, ice, snow, lightning, wind, explosions, earthquake, interruption of utilities, theft, hurricane, negligence of other tenants, occupants, or invited/uninvited guests or vandalism unless otherwise required by law.\"\n**DC Law:** \"Certain lease clauses are prohibited, including waiver of landlord liability for failing to properly maintain the property.\"\n**Source:** DC Tenant Bill of Rights, Page 1\n**Why it matters:** This clause purports to release the landlord from responsibility for injury and property loss caused by maintenance-related conditions such as pipe leaks, flooding, and utility interruptions. DC prohibits lease clauses waiving landlord liability for failure to properly maintain the property, so the tenant may retain claims the lease appears to eliminate.\n\n**[REVIEW WITH ATTORNEY]** — \"As is\" acceptance of the apartment and fixtures (may violate DC law per the reference)\n**Clause:** \"You accept the Apartment, fixtures, and furniture as is, except for conditions required by law to be fixed by us.\"\n**DC Law:** \"The landlord must maintain your apartment and all common areas of the building in compliance with the housing code, including keeping the premises safe and secure and free of rodents and pests, keeping the structure and facilities of the building in good repair, and ensuring adequate heat, lighting, and ventilation.\"\n**Source:** DC Tenant Bill of Rights, Page 2\n**Why it matters:** An \"as is\" acceptance can be read to shift the burden of pre-existing defects onto the tenant, while DC law imposes a non-waivable duty on the landlord to deliver and maintain a unit in compliance with the housing code.\n\n**[REVIEW WITH ATTORNEY]** — Tenant required to pay landlord's court costs as \"rent\" (may violate DC law per the reference)\n**Clause:** \"You will reimburse us for all court costs we incur as a result of any legal action we bring against you for breach of this Lease, as awarded by the court. Such costs will be considered rent.\"\n**DC Law:** \"Certain lease clauses are prohibited, including waiver of landlord liability for failing to properly maintain the property.\"\n**Source:** 14 DCMR § 304\n**Why it matters:** Recharacterizing the landlord's litigation costs as \"rent\" could allow a nonpayment eviction action over disputed legal expenses rather than actual rent. Fee- and cost-shifting provisions against tenants are restricted under DC housing regulations.\n\n**[REVIEW WITH ATTORNEY]** — Blanket waiver of liability and indemnity for amenity and common-area injuries (may violate DC law per the reference)\n**Clause:** \"you, on behalf of yourself and your family members, minor children and guests, assume all risk of bodily injury, death and property damage (\\\"Claims\\\") and agree to hold harmless, indemnify and defend Owner and its Management Agent and their employees, successors, or assigns against any and all such Claims and attorneys' fees arising directly or indirectly from any such occurrences in or about the Facilities.\"\n**DC Law:** \"Certain lease clauses are prohibited, including waiver of landlord liability for failing to properly maintain the property.\"\n**Source:** DC Tenant Bill of Rights, Page 1\n**Why it matters:** This provision waives claims for injury or death in the pool, fitness center, and other common facilities — including injuries caused by the landlord's failure to maintain them — and also forces the tenant to pay the landlord's attorneys' fees.\n\n**[CAUTION]** — Waiver of habitability, rent offset, and quiet enjoyment claims in mixed-use building (may violate DC law per the reference)\n**Clause:** \"You agree that any inconvenience associated with the mixed-use and/or the surrounding area, such as, but not limited to, those disclosed herein, will not be deemed to give you any offset to rent obligations, nor will they be the basis for a complaint against us for rent relief, constructive eviction, fitness and habitability, peaceful and quiet enjoyment, nuisance, or any other claim, right or remedy.\"\n**DC Law:** \"The landlord must ensure that your unit and all common areas are safe and sanitary as of the first day of your tenancy.  This is known as the \\\"warranty of habitability.\\\"\"\n**Source:** DC Tenant Bill of Rights, Page 2\n**Why it matters:** The clause asks the tenant to give up habitability, quiet enjoyment, and rent-offset remedies in advance, which conflicts with the statutory warranty of habitability; its practical scope is ambiguous because it is framed around \"inconvenience\" from neighboring businesses.",
+      "generator_stop_reason": "end_turn",
+      "api_calls": 6,
+      "cached_calls": 0,
+      "candidates": [
+        {
+          "index": 0,
+          "judged": true,
+          "verdict": "APPROVE",
+          "approved": true,
+          "in_report": true,
+          "block": "**[REVIEW WITH ATTORNEY]** — Waiver of landlord liability for fire, water, pipe leaks, and utility failures (may violate DC law per the reference)\n**Clause:** \"We do not maintain insurance to cover your personal property or personal injury. We are not responsible to any tenant, guest, or occupant for damage or loss of personal property or personal injury from (including but not limited to) fire, smoke, rain, flood, water and pipe leaks, hail, ice, snow, lightning, wind, explosions, earthquake, interruption of utilities, theft, hurricane, negligence of other tenants, occupants, or invited/uninvited guests or vandalism unless otherwise required by law.\"\n**DC Law:** \"Certain lease clauses are prohibited, including waiver of landlord liability for failing to properly maintain the property.\"\n**Source:** DC Tenant Bill of Rights, Page 1\n**Why it matters:** This clause purports to release the landlord from responsibility for injury and property loss caused by maintenance-related conditions such as pipe leaks, flooding, and utility interruptions. DC prohibits lease clauses waiving landlord liability for failure to properly maintain the property, so the tenant may retain claims the lease appears to eliminate.",
+          "severity": "REVIEW WITH ATTORNEY",
+          "title": "Waiver of landlord liability for fire, water, pipe leaks, and utility failures",
+          "clause": "\"We do not maintain insurance to cover your personal property or personal injury. We are not responsible to any tenant, guest, or occupant for damage or loss of personal property or personal injury from (including but not limited to) fire, smoke, rain, flood, water and pipe leaks, hail, ice, snow, lightning, wind, explosions, earthquake, interruption of utilities, theft, hurricane, negligence of other tenants, occupants, or invited/uninvited guests or vandalism unless otherwise required by law.\"",
+          "law": "\"Certain lease clauses are prohibited, including waiver of landlord liability for failing to properly maintain the property.\"",
+          "source": "DC Tenant Bill of Rights, Page 1",
+          "why": "This clause purports to release the landlord from responsibility for injury and property loss caused by maintenance-related conditions such as pipe leaks, flooding, and utility interruptions. DC prohibits lease clauses waiving landlord liability for failure to properly maintain the property, so the tenant may retain claims the lease appears to eliminate.",
+          "match_text": "\"We do not maintain insurance to cover your personal property or personal injury. We are not responsible to any tenant, guest, or occupant for damage or loss of personal property or personal injury from (including but not limited to) fire, smoke, rain, flood, water and pipe leaks, hail, ice, snow, lightning, wind, explosions, earthquake, interruption of utilities, theft, hurricane, negligence of other tenants, occupants, or invited/uninvited guests or vandalism unless otherwise required by law.\"",
+          "law_quote_score": 1.0
+        },
+        {
+          "index": 1,
+          "judged": true,
+          "verdict": "APPROVE",
+          "approved": true,
+          "in_report": true,
+          "block": "**[REVIEW WITH ATTORNEY]** — \"As is\" acceptance of the apartment and fixtures (may violate DC law per the reference)\n**Clause:** \"You accept the Apartment, fixtures, and furniture as is, except for conditions required by law to be fixed by us.\"\n**DC Law:** \"The landlord must maintain your apartment and all common areas of the building in compliance with the housing code, including keeping the premises safe and secure and free of rodents and pests, keeping the structure and facilities of the building in good repair, and ensuring adequate heat, lighting, and ventilation.\"\n**Source:** DC Tenant Bill of Rights, Page 2\n**Why it matters:** An \"as is\" acceptance can be read to shift the burden of pre-existing defects onto the tenant, while DC law imposes a non-waivable duty on the landlord to deliver and maintain a unit in compliance with the housing code.",
+          "severity": "REVIEW WITH ATTORNEY",
+          "title": "As is\" acceptance of the apartment and fixtures",
+          "clause": "\"You accept the Apartment, fixtures, and furniture as is, except for conditions required by law to be fixed by us.\"",
+          "law": "\"The landlord must maintain your apartment and all common areas of the building in compliance with the housing code, including keeping the premises safe and secure and free of rodents and pests, keeping the structure and facilities of the building in good repair, and ensuring adequate heat, lighting, and ventilation.\"",
+          "source": "DC Tenant Bill of Rights, Page 2",
+          "why": "An \"as is\" acceptance can be read to shift the burden of pre-existing defects onto the tenant, while DC law imposes a non-waivable duty on the landlord to deliver and maintain a unit in compliance with the housing code.",
+          "match_text": "\"You accept the Apartment, fixtures, and furniture as is, except for conditions required by law to be fixed by us.\"",
+          "law_quote_score": 1.0
+        },
+        {
+          "index": 2,
+          "judged": true,
+          "verdict": "APPROVE",
+          "approved": true,
+          "in_report": true,
+          "block": "**[REVIEW WITH ATTORNEY]** — Tenant required to pay landlord's court costs as \"rent\" (may violate DC law per the reference)\n**Clause:** \"You will reimburse us for all court costs we incur as a result of any legal action we bring against you for breach of this Lease, as awarded by the court. Such costs will be considered rent.\"\n**DC Law:** \"Certain lease clauses are prohibited, including waiver of landlord liability for failing to properly maintain the property.\"\n**Source:** 14 DCMR § 304\n**Why it matters:** Recharacterizing the landlord's litigation costs as \"rent\" could allow a nonpayment eviction action over disputed legal expenses rather than actual rent. Fee- and cost-shifting provisions against tenants are restricted under DC housing regulations.",
+          "severity": "REVIEW WITH ATTORNEY",
+          "title": "Tenant required to pay landlord's court costs as \"rent\"",
+          "clause": "\"You will reimburse us for all court costs we incur as a result of any legal action we bring against you for breach of this Lease, as awarded by the court. Such costs will be considered rent.\"",
+          "law": "\"Certain lease clauses are prohibited, including waiver of landlord liability for failing to properly maintain the property.\"",
+          "source": "14 DCMR § 304",
+          "why": "Recharacterizing the landlord's litigation costs as \"rent\" could allow a nonpayment eviction action over disputed legal expenses rather than actual rent. Fee- and cost-shifting provisions against tenants are restricted under DC housing regulations.",
+          "match_text": "\"You will reimburse us for all court costs we incur as a result of any legal action we bring against you for breach of this Lease, as awarded by the court. Such costs will be considered rent.\"",
+          "law_quote_score": 1.0
+        },
+        {
+          "index": 3,
+          "judged": true,
+          "verdict": "APPROVE",
+          "approved": true,
+          "in_report": true,
+          "block": "**[REVIEW WITH ATTORNEY]** — Blanket waiver of liability and indemnity for amenity and common-area injuries (may violate DC law per the reference)\n**Clause:** \"you, on behalf of yourself and your family members, minor children and guests, assume all risk of bodily injury, death and property damage (\\\"Claims\\\") and agree to hold harmless, indemnify and defend Owner and its Management Agent and their employees, successors, or assigns against any and all such Claims and attorneys' fees arising directly or indirectly from any such occurrences in or about the Facilities.\"\n**DC Law:** \"Certain lease clauses are prohibited, including waiver of landlord liability for failing to properly maintain the property.\"\n**Source:** DC Tenant Bill of Rights, Page 1\n**Why it matters:** This provision waives claims for injury or death in the pool, fitness center, and other common facilities — including injuries caused by the landlord's failure to maintain them — and also forces the tenant to pay the landlord's attorneys' fees.",
+          "severity": "REVIEW WITH ATTORNEY",
+          "title": "Blanket waiver of liability and indemnity for amenity and common-area injuries",
+          "clause": "\"you, on behalf of yourself and your family members, minor children and guests, assume all risk of bodily injury, death and property damage (\\\"Claims\\\") and agree to hold harmless, indemnify and defend Owner and its Management Agent and their employees, successors, or assigns against any and all such Claims and attorneys' fees arising directly or indirectly from any such occurrences in or about the Facilities.\"",
+          "law": "\"Certain lease clauses are prohibited, including waiver of landlord liability for failing to properly maintain the property.\"",
+          "source": "DC Tenant Bill of Rights, Page 1",
+          "why": "This provision waives claims for injury or death in the pool, fitness center, and other common facilities — including injuries caused by the landlord's failure to maintain them — and also forces the tenant to pay the landlord's attorneys' fees.",
+          "match_text": "\"you, on behalf of yourself and your family members, minor children and guests, assume all risk of bodily injury, death and property damage (\\\"Claims\\\") and agree to hold harmless, indemnify and defend Owner and its Management Agent and their employees, successors, or assigns against any and all such Claims and attorneys' fees arising directly or indirectly from any such occurrences in or about the Facilities.\"",
+          "law_quote_score": 1.0
+        },
+        {
+          "index": 4,
+          "judged": true,
+          "verdict": "APPROVE",
+          "approved": true,
+          "in_report": true,
+          "block": "**[CAUTION]** — Waiver of habitability, rent offset, and quiet enjoyment claims in mixed-use building (may violate DC law per the reference)\n**Clause:** \"You agree that any inconvenience associated with the mixed-use and/or the surrounding area, such as, but not limited to, those disclosed herein, will not be deemed to give you any offset to rent obligations, nor will they be the basis for a complaint against us for rent relief, constructive eviction, fitness and habitability, peaceful and quiet enjoyment, nuisance, or any other claim, right or remedy.\"\n**DC Law:** \"The landlord must ensure that your unit and all common areas are safe and sanitary as of the first day of your tenancy.  This is known as the \\\"warranty of habitability.\\\"\"\n**Source:** DC Tenant Bill of Rights, Page 2\n**Why it matters:** The clause asks the tenant to give up habitability, quiet enjoyment, and rent-offset remedies in advance, which conflicts with the statutory warranty of habitability; its practical scope is ambiguous because it is framed around \"inconvenience\" from neighboring businesses.",
+          "severity": "CAUTION",
+          "title": "Waiver of habitability, rent offset, and quiet enjoyment claims in mixed-use building",
+          "clause": "\"You agree that any inconvenience associated with the mixed-use and/or the surrounding area, such as, but not limited to, those disclosed herein, will not be deemed to give you any offset to rent obligations, nor will they be the basis for a complaint against us for rent relief, constructive eviction, fitness and habitability, peaceful and quiet enjoyment, nuisance, or any other claim, right or remedy.\"",
+          "law": "\"The landlord must ensure that your unit and all common areas are safe and sanitary as of the first day of your tenancy.  This is known as the \\\"warranty of habitability.\\\"\"",
+          "source": "DC Tenant Bill of Rights, Page 2",
+          "why": "The clause asks the tenant to give up habitability, quiet enjoyment, and rent-offset remedies in advance, which conflicts with the statutory warranty of habitability; its practical scope is ambiguous because it is framed around \"inconvenience\" from neighboring businesses.",
+          "match_text": "\"You agree that any inconvenience associated with the mixed-use and/or the surrounding area, such as, but not limited to, those disclosed herein, will not be deemed to give you any offset to rent obligations, nor will they be the basis for a complaint against us for rent relief, constructive eviction, fitness and habitability, peaceful and quiet enjoyment, nuisance, or any other claim, right or remedy.\"",
+          "law_quote_score": 1.0
+        }
+      ]
+    },
+    {
+      "lease_file": "VA-1",
+      "jurisdiction": "VA",
+      "text_sha256": "529a412ff97b046dfff173e4e25d8b29f3fc3960eb3924b49640350d5f1703f7",
+      "chars": 71004,
+      "pages": 18,
+      "generator_raw": "**[REVIEW WITH ATTORNEY]** — Blanket casualty/maintenance liability waiver (may violate Virginia law per the reference)\n**Clause:** \"Casualty Loss Neither Landlord nor Manager are liable to any resident, guest, or occupant for personal injury or damage or loss of personal property from any cause, including but not limited to: fire, smoke, rain, flood, water and pipe leaks, hail, ice, snow, lightning, wind, explosions, earthquake, interruption of utilities, theft, or vandalism unless otherwise required by law.\"\n**VA Law:** \"A lease cannot give up a tenantʼs rights under the law.\"\n**Source:** Virginia Residential Landlord and Tenant Act, § 55.1-1204\n**Why it matters:** This clause attempts to eliminate landlord liability for injury or property damage from maintenance-related causes such as fire, flood, pipe leaks, and utility interruptions, which a lease may not validly waive.\n\n**[REVIEW WITH ATTORNEY]** — Liability disclaimer for occurrences on the Premises (may violate Virginia law per the reference)\n**Clause:** \"The Landlord and/or the Association shall not be liable for any injury, damage, or loss resulting from any accident or occurrence in or upon the Premises.\"\n**VA Law:** \"A lease cannot give up a tenantʼs rights under the law.\"\n**Source:** Virginia Residential Landlord and Tenant Act, § 55.1-1204\n**Why it matters:** A total disclaimer of liability for any accident or occurrence on the premises, including common areas and facilities, would strip the tenant of remedies the statute preserves.\n\n**[REVIEW WITH ATTORNEY]** — \"As is\" disclaimer of landlord's duty to repair fixtures and appliances (may violate Virginia law per the reference)\n**Clause:** \"Any fixture or appliance provided in “As Is” condition need not be repaired, replaced or maintained by the Landlord. Those items listed “As Is” are provided in as is, where is condition, with any existing faults. Landlord will have no duty to maintain or repair such items.\"\n**VA Law:** \"Fit and Habitable Premises: A tenant has the right to a fit and habitable rental unit in accordance with the Uniform Statewide Building Code. The landlord must make all repairs needed to keep premises fit and habitable. (§55.1-1220)\"\n**Source:** Virginia Residential Landlord and Tenant Act, § 55.1-1234\n**Why it matters:** The lease purports to remove the landlord's maintenance and repair duty for fixtures and appliances, which conflicts with the statutory obligation to keep the premises fit and habitable.\n\n**[REVIEW WITH ATTORNEY]** — Tenant pays landlord's attorney fees and enforcement costs (may violate Virginia law per the reference)\n**Clause:** \"Tenant shall pay all costs, expenses, fees, and charges incurred by Landlord in enforcing, by legal action or otherwise, any of the provisions of Lease, including the payment of reasonable attorneys’ fees, and Tenant hereby waives the benefit of any homestead or similar exemption laws with respect to the obligations of Lease.\"\n**VA Law:** \"A lease cannot give up a tenantʼs rights under the law.\"\n**Source:** Virginia Residential Landlord and Tenant Act, § 55.1-1204\n**Why it matters:** Automatic fee shifting for any enforcement effort, even without a lawsuit, plus a waiver of exemption laws, can expose the tenant to substantial charges beyond what the statute permits.\n\n**[REVIEW WITH ATTORNEY]** — Rent payable without deduction or offset (repair-and-deduct waiver) (may violate Virginia law per the reference)\n**Clause:** \"Regular Monthly Installments. The charges below shall be paid in advance of the first (1st) day of each month after the first full month of the Term without notice, demand, deduction or offset.\"\n**VA Law:** \"Repair and Deduct: If an issue on the property affects life, health, safety, or seriously affects habitability, and a landlord has not begun to address it within 14 days after written notice from the tenant, the tenant may contract to have the repair done by a licensed contractor at a cost of not more than $1,500, or one monthʼs rent, whichever is more. The tenant may deduct the actual cost of the repair from the rent.\"\n**Source:** Virginia Residential Landlord and Tenant Act, § 55.1-1244.1\n**Why it matters:** Requiring rent \"without deduction or offset\" conflicts with the tenant's statutory right to deduct the cost of qualifying repairs from rent.",
+      "generator_stop_reason": "end_turn",
+      "api_calls": 6,
+      "cached_calls": 0,
+      "candidates": [
+        {
+          "index": 0,
+          "judged": true,
+          "verdict": "APPROVE",
+          "approved": true,
+          "in_report": true,
+          "block": "**[REVIEW WITH ATTORNEY]** — Blanket casualty/maintenance liability waiver (may violate Virginia law per the reference)\n**Clause:** \"Casualty Loss Neither Landlord nor Manager are liable to any resident, guest, or occupant for personal injury or damage or loss of personal property from any cause, including but not limited to: fire, smoke, rain, flood, water and pipe leaks, hail, ice, snow, lightning, wind, explosions, earthquake, interruption of utilities, theft, or vandalism unless otherwise required by law.\"\n**VA Law:** \"A lease cannot give up a tenantʼs rights under the law.\"\n**Source:** Virginia Residential Landlord and Tenant Act, § 55.1-1204\n**Why it matters:** This clause attempts to eliminate landlord liability for injury or property damage from maintenance-related causes such as fire, flood, pipe leaks, and utility interruptions, which a lease may not validly waive.",
+          "severity": "REVIEW WITH ATTORNEY",
+          "title": "Blanket casualty/maintenance liability waiver",
+          "clause": "\"Casualty Loss Neither Landlord nor Manager are liable to any resident, guest, or occupant for personal injury or damage or loss of personal property from any cause, including but not limited to: fire, smoke, rain, flood, water and pipe leaks, hail, ice, snow, lightning, wind, explosions, earthquake, interruption of utilities, theft, or vandalism unless otherwise required by law.\"",
+          "law": "\"A lease cannot give up a tenantʼs rights under the law.\"",
+          "source": "Virginia Residential Landlord and Tenant Act, § 55.1-1204",
+          "why": "This clause attempts to eliminate landlord liability for injury or property damage from maintenance-related causes such as fire, flood, pipe leaks, and utility interruptions, which a lease may not validly waive.",
+          "match_text": "\"Casualty Loss Neither Landlord nor Manager are liable to any resident, guest, or occupant for personal injury or damage or loss of personal property from any cause, including but not limited to: fire, smoke, rain, flood, water and pipe leaks, hail, ice, snow, lightning, wind, explosions, earthquake, interruption of utilities, theft, or vandalism unless otherwise required by law.\"",
+          "law_quote_score": 0.0
+        },
+        {
+          "index": 1,
+          "judged": true,
+          "verdict": "APPROVE",
+          "approved": true,
+          "in_report": true,
+          "block": "**[REVIEW WITH ATTORNEY]** — Liability disclaimer for occurrences on the Premises (may violate Virginia law per the reference)\n**Clause:** \"The Landlord and/or the Association shall not be liable for any injury, damage, or loss resulting from any accident or occurrence in or upon the Premises.\"\n**VA Law:** \"A lease cannot give up a tenantʼs rights under the law.\"\n**Source:** Virginia Residential Landlord and Tenant Act, § 55.1-1204\n**Why it matters:** A total disclaimer of liability for any accident or occurrence on the premises, including common areas and facilities, would strip the tenant of remedies the statute preserves.",
+          "severity": "REVIEW WITH ATTORNEY",
+          "title": "Liability disclaimer for occurrences on the Premises",
+          "clause": "\"The Landlord and/or the Association shall not be liable for any injury, damage, or loss resulting from any accident or occurrence in or upon the Premises.\"",
+          "law": "\"A lease cannot give up a tenantʼs rights under the law.\"",
+          "source": "Virginia Residential Landlord and Tenant Act, § 55.1-1204",
+          "why": "A total disclaimer of liability for any accident or occurrence on the premises, including common areas and facilities, would strip the tenant of remedies the statute preserves.",
+          "match_text": "\"The Landlord and/or the Association shall not be liable for any injury, damage, or loss resulting from any accident or occurrence in or upon the Premises.\"",
+          "law_quote_score": 0.0
+        },
+        {
+          "index": 2,
+          "judged": true,
+          "verdict": "APPROVE",
+          "approved": true,
+          "in_report": true,
+          "block": "**[REVIEW WITH ATTORNEY]** — \"As is\" disclaimer of landlord's duty to repair fixtures and appliances (may violate Virginia law per the reference)\n**Clause:** \"Any fixture or appliance provided in “As Is” condition need not be repaired, replaced or maintained by the Landlord. Those items listed “As Is” are provided in as is, where is condition, with any existing faults. Landlord will have no duty to maintain or repair such items.\"\n**VA Law:** \"Fit and Habitable Premises: A tenant has the right to a fit and habitable rental unit in accordance with the Uniform Statewide Building Code. The landlord must make all repairs needed to keep premises fit and habitable. (§55.1-1220)\"\n**Source:** Virginia Residential Landlord and Tenant Act, § 55.1-1234\n**Why it matters:** The lease purports to remove the landlord's maintenance and repair duty for fixtures and appliances, which conflicts with the statutory obligation to keep the premises fit and habitable.",
+          "severity": "REVIEW WITH ATTORNEY",
+          "title": "As is\" disclaimer of landlord's duty to repair fixtures and appliances",
+          "clause": "\"Any fixture or appliance provided in “As Is” condition need not be repaired, replaced or maintained by the Landlord. Those items listed “As Is” are provided in as is, where is condition, with any existing faults. Landlord will have no duty to maintain or repair such items.\"",
+          "law": "\"Fit and Habitable Premises: A tenant has the right to a fit and habitable rental unit in accordance with the Uniform Statewide Building Code. The landlord must make all repairs needed to keep premises fit and habitable. (§55.1-1220)\"",
+          "source": "Virginia Residential Landlord and Tenant Act, § 55.1-1234",
+          "why": "The lease purports to remove the landlord's maintenance and repair duty for fixtures and appliances, which conflicts with the statutory obligation to keep the premises fit and habitable.",
+          "match_text": "\"Any fixture or appliance provided in “As Is” condition need not be repaired, replaced or maintained by the Landlord. Those items listed “As Is” are provided in as is, where is condition, with any existing faults. Landlord will have no duty to maintain or repair such items.\"",
+          "law_quote_score": 0.028
+        },
+        {
+          "index": 3,
+          "judged": true,
+          "verdict": "APPROVE",
+          "approved": true,
+          "in_report": true,
+          "block": "**[REVIEW WITH ATTORNEY]** — Tenant pays landlord's attorney fees and enforcement costs (may violate Virginia law per the reference)\n**Clause:** \"Tenant shall pay all costs, expenses, fees, and charges incurred by Landlord in enforcing, by legal action or otherwise, any of the provisions of Lease, including the payment of reasonable attorneys’ fees, and Tenant hereby waives the benefit of any homestead or similar exemption laws with respect to the obligations of Lease.\"\n**VA Law:** \"A lease cannot give up a tenantʼs rights under the law.\"\n**Source:** Virginia Residential Landlord and Tenant Act, § 55.1-1204\n**Why it matters:** Automatic fee shifting for any enforcement effort, even without a lawsuit, plus a waiver of exemption laws, can expose the tenant to substantial charges beyond what the statute permits.",
+          "severity": "REVIEW WITH ATTORNEY",
+          "title": "Tenant pays landlord's attorney fees and enforcement costs",
+          "clause": "\"Tenant shall pay all costs, expenses, fees, and charges incurred by Landlord in enforcing, by legal action or otherwise, any of the provisions of Lease, including the payment of reasonable attorneys’ fees, and Tenant hereby waives the benefit of any homestead or similar exemption laws with respect to the obligations of Lease.\"",
+          "law": "\"A lease cannot give up a tenantʼs rights under the law.\"",
+          "source": "Virginia Residential Landlord and Tenant Act, § 55.1-1204",
+          "why": "Automatic fee shifting for any enforcement effort, even without a lawsuit, plus a waiver of exemption laws, can expose the tenant to substantial charges beyond what the statute permits.",
+          "match_text": "\"Tenant shall pay all costs, expenses, fees, and charges incurred by Landlord in enforcing, by legal action or otherwise, any of the provisions of Lease, including the payment of reasonable attorneys’ fees, and Tenant hereby waives the benefit of any homestead or similar exemption laws with respect to the obligations of Lease.\"",
+          "law_quote_score": 0.0
+        },
+        {
+          "index": 4,
+          "judged": true,
+          "verdict": "APPROVE",
+          "approved": true,
+          "in_report": true,
+          "block": "**[REVIEW WITH ATTORNEY]** — Rent payable without deduction or offset (repair-and-deduct waiver) (may violate Virginia law per the reference)\n**Clause:** \"Regular Monthly Installments. The charges below shall be paid in advance of the first (1st) day of each month after the first full month of the Term without notice, demand, deduction or offset.\"\n**VA Law:** \"Repair and Deduct: If an issue on the property affects life, health, safety, or seriously affects habitability, and a landlord has not begun to address it within 14 days after written notice from the tenant, the tenant may contract to have the repair done by a licensed contractor at a cost of not more than $1,500, or one monthʼs rent, whichever is more. The tenant may deduct the actual cost of the repair from the rent.\"\n**Source:** Virginia Residential Landlord and Tenant Act, § 55.1-1244.1\n**Why it matters:** Requiring rent \"without deduction or offset\" conflicts with the tenant's statutory right to deduct the cost of qualifying repairs from rent.",
+          "severity": "REVIEW WITH ATTORNEY",
+          "title": "Rent payable without deduction or offset (repair-and-deduct waiver)",
+          "clause": "\"Regular Monthly Installments. The charges below shall be paid in advance of the first (1st) day of each month after the first full month of the Term without notice, demand, deduction or offset.\"",
+          "law": "\"Repair and Deduct: If an issue on the property affects life, health, safety, or seriously affects habitability, and a landlord has not begun to address it within 14 days after written notice from the tenant, the tenant may contract to have the repair done by a licensed contractor at a cost of not more than $1,500, or one monthʼs rent, whichever is more. The tenant may deduct the actual cost of the repair from the rent.\"",
+          "source": "Virginia Residential Landlord and Tenant Act, § 55.1-1244.1",
+          "why": "Requiring rent \"without deduction or offset\" conflicts with the tenant's statutory right to deduct the cost of qualifying repairs from rent.",
+          "match_text": "\"Regular Monthly Installments. The charges below shall be paid in advance of the first (1st) day of each month after the first full month of the Term without notice, demand, deduction or offset.\"",
+          "law_quote_score": 0.0
+        }
+      ]
+    },
+    {
+      "lease_file": "VA-2",
+      "jurisdiction": "VA",
+      "text_sha256": "33eded5cf0e9703414ea7d9bf5b2c55d6f1cdb8fa13d571b277aaa1f7980dc0c",
+      "chars": 283284,
+      "pages": 71,
+      "generator_raw": "**[REVIEW WITH ATTORNEY]** — Blanket waiver of landlord liability for fire, water, pipe leaks, and utility interruption (may violate Virginia law per the reference)\n**Clause:** \"Casualty Loss. We’re not liable to any resident, guest, or occupant for personal injury or damage or loss of personal property from any cause, including but not limited to: fire, smoke, rain, flood, water and pipe leaks, hail, ice, snow, lightning, wind, explosions, earthquake, interruption of utilities, theft, or vandalism unless otherwise required by law.\"\n**VA Law:** \"\\\"Premises\\\" means a dwelling unit and the structure of which it is a part, facilities and appurtenances contained therein, and grounds, areas, and facilities held out for the use of tenants generally or whose use is promised to the tenant.\"\n**Source:** Virginia Residential Landlord and Tenant Act, § 55.1-1204\n**Why it matters:** A lease provision purporting to relieve the landlord of liability for personal injury or property damage arising from maintenance-related causes such as fire, water and pipe leaks, or utility interruption is unenforceable under the VRLTA, and relying on it could cause the tenant to forgo a valid claim.\n\n**[REVIEW WITH ATTORNEY]** — \"As is\" acceptance of the apartment, fixtures, and furniture (may violate Virginia law per the reference)\n**Clause:** \"Except for our duty to maintain in good and safe condition all electrical, plumbing, sanitary, heating, ventilating, air conditioning and other facilities, and, except for conditions materially affecting the health or safety of ordinary persons, you accept the apartment, fixtures, and furniture as is.\"\n**VA Law:** \"\\\"Building or housing code\\\" means any law, ordinance, or governmental regulation concerning fitness for habitation or the construction, maintenance, operation, occupancy, use, or appearance of any structure or that part of a structure that is used as a home, residence, or sleeping place by one person who maintains a household or by two or more persons who maintain a common household.\"\n**Source:** Virginia Residential Landlord and Tenant Act, § 55.1-1234\n**Why it matters:** An \"as is\" acceptance clause cannot override the landlord's statutory duty to maintain the premises, fixtures, and appliances in a fit and habitable condition, and may mislead the tenant into believing repairs are their own responsibility.\n\n**[REVIEW WITH ATTORNEY]** — Tenant required to pay landlord's attorney fees and court costs (may violate Virginia law per the reference)\n**Clause:** \"the Owner shall be entitled to recover from the Resident the following, regardless of whether a lawsuit is filed or an order is obtained from a court: (i) rent due and owing as contracted for in the Lease Contract, (ii) other charges and fees as contracted for in the Lease Contract, (iii) late charges contracted for in the Lease Contract, (iv) reasonable attorneys’ fees incurred by Owner, (v) costs of the proceeding as contracted for in the Lease Contract or as provided by law only if court action has been filed\"\n**VA Law:** \"\\\"Action\\\" means any recoupment, counterclaim, setoff, or other civil action and any other proceeding in which rights are determined, including actions for possession, rent, unlawful detainer, unlawful entry, and distress for rent.\"\n**Source:** Virginia Residential Landlord and Tenant Act, § 55.1-1204\n**Why it matters:** Fee-shifting provisions that obligate the tenant to pay the landlord's attorney fees and enforcement costs — here even without any court action — are restricted under the VRLTA and can expose the tenant to substantial unanticipated costs.\n\n**[REVIEW WITH ATTORNEY]** — Waiver of claims and rent offset for utility outages and interruptions (may violate Virginia law per the reference)\n**Clause:** \"We are not liable for any losses or damages you incur as a result of outages, interruptions, or fluctuations in utility services provided to the dwelling unless such loss or damage was the direct result of negligence by us or our employees. You release us from any and all such claims and waive any claims for offset or reduction of rent or diminished rental value of the dwelling due to such outages, interruptions, or fluctuations.\"\n**VA Law:** \"\\\"Essential service\\\" includes heat, running water, hot water, electricity, and gas.\"\n**Source:** Virginia Residential Landlord and Tenant Act, § 55.1-1204\n**Why it matters:** This clause disclaims landlord liability for failures of essential utility services and simultaneously strips the tenant of statutory remedies such as rent offset, which a lease may not lawfully waive.\n\n**[REVIEW WITH ATTORNEY]** — Waiver of all claims arising from use of common areas and amenities (may violate Virginia law per the reference)\n**Clause:** \"Resident (“You”) expressly agrees to assume all risks of every type, including but not limited to risks of personal injury or property damage, of whatever nature or severity, including incidents leading to or causing death, that are causally related to your use of common areas or amenities at the Community (including the gym, pool, clubroom, roof areas, lobby, elevators, and entryways). You agree to hold Owner and Manager harmless and to release and to waive any and all claims\"\n**VA Law:** \"\\\"Premises\\\" means a dwelling unit and the structure of which it is a part, facilities and appurtenances contained therein, and grounds, areas, and facilities held out for the use of tenants generally or whose use is promised to the tenant.\"\n**Source:** Virginia Residential Landlord and Tenant Act, § 55.1-1204\n**Why it matters:** Common areas and amenities are part of the \"premises\" the landlord must maintain, and a blanket waiver of liability for injuries occurring there may be unenforceable and could cause the tenant to abandon a legitimate injury claim.",
+      "generator_stop_reason": "end_turn",
+      "api_calls": 6,
+      "cached_calls": 0,
+      "candidates": [
+        {
+          "index": 0,
+          "judged": true,
+          "verdict": "APPROVE",
+          "approved": true,
+          "in_report": true,
+          "block": "**[REVIEW WITH ATTORNEY]** — Blanket waiver of landlord liability for fire, water, pipe leaks, and utility interruption (may violate Virginia law per the reference)\n**Clause:** \"Casualty Loss. We’re not liable to any resident, guest, or occupant for personal injury or damage or loss of personal property from any cause, including but not limited to: fire, smoke, rain, flood, water and pipe leaks, hail, ice, snow, lightning, wind, explosions, earthquake, interruption of utilities, theft, or vandalism unless otherwise required by law.\"\n**VA Law:** \"\\\"Premises\\\" means a dwelling unit and the structure of which it is a part, facilities and appurtenances contained therein, and grounds, areas, and facilities held out for the use of tenants generally or whose use is promised to the tenant.\"\n**Source:** Virginia Residential Landlord and Tenant Act, § 55.1-1204\n**Why it matters:** A lease provision purporting to relieve the landlord of liability for personal injury or property damage arising from maintenance-related causes such as fire, water and pipe leaks, or utility interruption is unenforceable under the VRLTA, and relying on it could cause the tenant to forgo a valid claim.",
+          "severity": "REVIEW WITH ATTORNEY",
+          "title": "Blanket waiver of landlord liability for fire, water, pipe leaks, and utility interruption",
+          "clause": "\"Casualty Loss. We’re not liable to any resident, guest, or occupant for personal injury or damage or loss of personal property from any cause, including but not limited to: fire, smoke, rain, flood, water and pipe leaks, hail, ice, snow, lightning, wind, explosions, earthquake, interruption of utilities, theft, or vandalism unless otherwise required by law.\"",
+          "law": "\"\\\"Premises\\\" means a dwelling unit and the structure of which it is a part, facilities and appurtenances contained therein, and grounds, areas, and facilities held out for the use of tenants generally or whose use is promised to the tenant.\"",
+          "source": "Virginia Residential Landlord and Tenant Act, § 55.1-1204",
+          "why": "A lease provision purporting to relieve the landlord of liability for personal injury or property damage arising from maintenance-related causes such as fire, water and pipe leaks, or utility interruption is unenforceable under the VRLTA, and relying on it could cause the tenant to forgo a valid claim.",
+          "match_text": "\"Casualty Loss. We’re not liable to any resident, guest, or occupant for personal injury or damage or loss of personal property from any cause, including but not limited to: fire, smoke, rain, flood, water and pipe leaks, hail, ice, snow, lightning, wind, explosions, earthquake, interruption of utilities, theft, or vandalism unless otherwise required by law.\"",
+          "law_quote_score": 1.0
+        },
+        {
+          "index": 1,
+          "judged": true,
+          "verdict": "REJECT: The flag uses non-committal language ('may violate Virginia law per the reference') and cites § 55.1-1234 (which defines 'building or housing code') rather than the operative provision (§ 55.1-1204/§ 55.",
+          "approved": false,
+          "in_report": false,
+          "block": "**[REVIEW WITH ATTORNEY]** — \"As is\" acceptance of the apartment, fixtures, and furniture (may violate Virginia law per the reference)\n**Clause:** \"Except for our duty to maintain in good and safe condition all electrical, plumbing, sanitary, heating, ventilating, air conditioning and other facilities, and, except for conditions materially affecting the health or safety of ordinary persons, you accept the apartment, fixtures, and furniture as is.\"\n**VA Law:** \"\\\"Building or housing code\\\" means any law, ordinance, or governmental regulation concerning fitness for habitation or the construction, maintenance, operation, occupancy, use, or appearance of any structure or that part of a structure that is used as a home, residence, or sleeping place by one person who maintains a household or by two or more persons who maintain a common household.\"\n**Source:** Virginia Residential Landlord and Tenant Act, § 55.1-1234\n**Why it matters:** An \"as is\" acceptance clause cannot override the landlord's statutory duty to maintain the premises, fixtures, and appliances in a fit and habitable condition, and may mislead the tenant into believing repairs are their own responsibility.",
+          "severity": "REVIEW WITH ATTORNEY",
+          "title": "As is\" acceptance of the apartment, fixtures, and furniture",
+          "clause": "\"Except for our duty to maintain in good and safe condition all electrical, plumbing, sanitary, heating, ventilating, air conditioning and other facilities, and, except for conditions materially affecting the health or safety of ordinary persons, you accept the apartment, fixtures, and furniture as is.\"",
+          "law": "\"\\\"Building or housing code\\\" means any law, ordinance, or governmental regulation concerning fitness for habitation or the construction, maintenance, operation, occupancy, use, or appearance of any structure or that part of a structure that is used as a home, residence, or sleeping place by one person who maintains a household or by two or more persons who maintain a common household.\"",
+          "source": "Virginia Residential Landlord and Tenant Act, § 55.1-1234",
+          "why": "An \"as is\" acceptance clause cannot override the landlord's statutory duty to maintain the premises, fixtures, and appliances in a fit and habitable condition, and may mislead the tenant into believing repairs are their own responsibility.",
+          "match_text": "\"Except for our duty to maintain in good and safe condition all electrical, plumbing, sanitary, heating, ventilating, air conditioning and other facilities, and, except for conditions materially affecting the health or safety of ordinary persons, you accept the apartment, fixtures, and furniture as is.\"",
+          "law_quote_score": 1.0
+        },
+        {
+          "index": 2,
+          "judged": true,
+          "verdict": "APPROVE",
+          "approved": true,
+          "in_report": true,
+          "block": "**[REVIEW WITH ATTORNEY]** — Tenant required to pay landlord's attorney fees and court costs (may violate Virginia law per the reference)\n**Clause:** \"the Owner shall be entitled to recover from the Resident the following, regardless of whether a lawsuit is filed or an order is obtained from a court: (i) rent due and owing as contracted for in the Lease Contract, (ii) other charges and fees as contracted for in the Lease Contract, (iii) late charges contracted for in the Lease Contract, (iv) reasonable attorneys’ fees incurred by Owner, (v) costs of the proceeding as contracted for in the Lease Contract or as provided by law only if court action has been filed\"\n**VA Law:** \"\\\"Action\\\" means any recoupment, counterclaim, setoff, or other civil action and any other proceeding in which rights are determined, including actions for possession, rent, unlawful detainer, unlawful entry, and distress for rent.\"\n**Source:** Virginia Residential Landlord and Tenant Act, § 55.1-1204\n**Why it matters:** Fee-shifting provisions that obligate the tenant to pay the landlord's attorney fees and enforcement costs — here even without any court action — are restricted under the VRLTA and can expose the tenant to substantial unanticipated costs.",
+          "severity": "REVIEW WITH ATTORNEY",
+          "title": "Tenant required to pay landlord's attorney fees and court costs",
+          "clause": "\"the Owner shall be entitled to recover from the Resident the following, regardless of whether a lawsuit is filed or an order is obtained from a court: (i) rent due and owing as contracted for in the Lease Contract, (ii) other charges and fees as contracted for in the Lease Contract, (iii) late charges contracted for in the Lease Contract, (iv) reasonable attorneys’ fees incurred by Owner, (v) costs of the proceeding as contracted for in the Lease Contract or as provided by law only if court action has been filed\"",
+          "law": "\"\\\"Action\\\" means any recoupment, counterclaim, setoff, or other civil action and any other proceeding in which rights are determined, including actions for possession, rent, unlawful detainer, unlawful entry, and distress for rent.\"",
+          "source": "Virginia Residential Landlord and Tenant Act, § 55.1-1204",
+          "why": "Fee-shifting provisions that obligate the tenant to pay the landlord's attorney fees and enforcement costs — here even without any court action — are restricted under the VRLTA and can expose the tenant to substantial unanticipated costs.",
+          "match_text": "\"the Owner shall be entitled to recover from the Resident the following, regardless of whether a lawsuit is filed or an order is obtained from a court: (i) rent due and owing as contracted for in the Lease Contract, (ii) other charges and fees as contracted for in the Lease Contract, (iii) late charges contracted for in the Lease Contract, (iv) reasonable attorneys’ fees incurred by Owner, (v) costs of the proceeding as contracted for in the Lease Contract or as provided by law only if court action has been filed\"",
+          "law_quote_score": 1.0
+        },
+        {
+          "index": 3,
+          "judged": true,
+          "verdict": "APPROVE",
+          "approved": true,
+          "in_report": true,
+          "block": "**[REVIEW WITH ATTORNEY]** — Waiver of claims and rent offset for utility outages and interruptions (may violate Virginia law per the reference)\n**Clause:** \"We are not liable for any losses or damages you incur as a result of outages, interruptions, or fluctuations in utility services provided to the dwelling unless such loss or damage was the direct result of negligence by us or our employees. You release us from any and all such claims and waive any claims for offset or reduction of rent or diminished rental value of the dwelling due to such outages, interruptions, or fluctuations.\"\n**VA Law:** \"\\\"Essential service\\\" includes heat, running water, hot water, electricity, and gas.\"\n**Source:** Virginia Residential Landlord and Tenant Act, § 55.1-1204\n**Why it matters:** This clause disclaims landlord liability for failures of essential utility services and simultaneously strips the tenant of statutory remedies such as rent offset, which a lease may not lawfully waive.",
+          "severity": "REVIEW WITH ATTORNEY",
+          "title": "Waiver of claims and rent offset for utility outages and interruptions",
+          "clause": "\"We are not liable for any losses or damages you incur as a result of outages, interruptions, or fluctuations in utility services provided to the dwelling unless such loss or damage was the direct result of negligence by us or our employees. You release us from any and all such claims and waive any claims for offset or reduction of rent or diminished rental value of the dwelling due to such outages, interruptions, or fluctuations.\"",
+          "law": "\"\\\"Essential service\\\" includes heat, running water, hot water, electricity, and gas.\"",
+          "source": "Virginia Residential Landlord and Tenant Act, § 55.1-1204",
+          "why": "This clause disclaims landlord liability for failures of essential utility services and simultaneously strips the tenant of statutory remedies such as rent offset, which a lease may not lawfully waive.",
+          "match_text": "\"We are not liable for any losses or damages you incur as a result of outages, interruptions, or fluctuations in utility services provided to the dwelling unless such loss or damage was the direct result of negligence by us or our employees. You release us from any and all such claims and waive any claims for offset or reduction of rent or diminished rental value of the dwelling due to such outages, interruptions, or fluctuations.\"",
+          "law_quote_score": 1.0
+        },
+        {
+          "index": 4,
+          "judged": true,
+          "verdict": "APPROVE",
+          "approved": true,
+          "in_report": true,
+          "block": "**[REVIEW WITH ATTORNEY]** — Waiver of all claims arising from use of common areas and amenities (may violate Virginia law per the reference)\n**Clause:** \"Resident (“You”) expressly agrees to assume all risks of every type, including but not limited to risks of personal injury or property damage, of whatever nature or severity, including incidents leading to or causing death, that are causally related to your use of common areas or amenities at the Community (including the gym, pool, clubroom, roof areas, lobby, elevators, and entryways). You agree to hold Owner and Manager harmless and to release and to waive any and all claims\"\n**VA Law:** \"\\\"Premises\\\" means a dwelling unit and the structure of which it is a part, facilities and appurtenances contained therein, and grounds, areas, and facilities held out for the use of tenants generally or whose use is promised to the tenant.\"\n**Source:** Virginia Residential Landlord and Tenant Act, § 55.1-1204\n**Why it matters:** Common areas and amenities are part of the \"premises\" the landlord must maintain, and a blanket waiver of liability for injuries occurring there may be unenforceable and could cause the tenant to abandon a legitimate injury claim.",
+          "severity": "REVIEW WITH ATTORNEY",
+          "title": "Waiver of all claims arising from use of common areas and amenities",
+          "clause": "\"Resident (“You”) expressly agrees to assume all risks of every type, including but not limited to risks of personal injury or property damage, of whatever nature or severity, including incidents leading to or causing death, that are causally related to your use of common areas or amenities at the Community (including the gym, pool, clubroom, roof areas, lobby, elevators, and entryways). You agree to hold Owner and Manager harmless and to release and to waive any and all claims\"",
+          "law": "\"\\\"Premises\\\" means a dwelling unit and the structure of which it is a part, facilities and appurtenances contained therein, and grounds, areas, and facilities held out for the use of tenants generally or whose use is promised to the tenant.\"",
+          "source": "Virginia Residential Landlord and Tenant Act, § 55.1-1204",
+          "why": "Common areas and amenities are part of the \"premises\" the landlord must maintain, and a blanket waiver of liability for injuries occurring there may be unenforceable and could cause the tenant to abandon a legitimate injury claim.",
+          "match_text": "\"Resident (“You”) expressly agrees to assume all risks of every type, including but not limited to risks of personal injury or property damage, of whatever nature or severity, including incidents leading to or causing death, that are causally related to your use of common areas or amenities at the Community (including the gym, pool, clubroom, roof areas, lobby, elevators, and entryways). You agree to hold Owner and Manager harmless and to release and to waive any and all claims\"",
+          "law_quote_score": 1.0
+        }
+      ]
+    }
+  ],
+  "false_alarm_triage": {
+    "repeat_flag_on_labeled_clause": 0,
+    "reviewed_and_judged_lawful": 5,
+    "adjudicated_not_a_violation": 1,
+    "never_reviewed": 0
+  }
+}

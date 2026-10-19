@@ -1,0 +1,764 @@
+[
+ {
+  "id": "Q01",
+  "lease_file": "DC-1",
+  "page": 2,
+  "flagged_text": "You must pay for any such change or rekeying, unless otherwise provided by law",
+  "flagged_by": [
+   "chat_opus"
+  ],
+  "verdict": "lawful",
+  "issue": "",
+  "statute_citation": "D.C. Code § 42-3505.10(b-2)(1)(A)",
+  "reasoning": "The clause charges for a rekey the tenant chooses to request and for repairs of devices the tenant, occupants or guests misuse or damage. Neither is a service the landlord must provide to keep the unit habitable, and the rekey charge applies only 'unless otherwise provided by law'.",
+  "re_judged_on_flagged_sentence": false,
+  "round": 1
+ },
+ {
+  "id": "Q02",
+  "lease_file": "DC-2",
+  "page": 4,
+  "flagged_text": "In the event that the named Tenant(s) dies, all occupants must immediately vacate the Apartment",
+  "flagged_by": [
+   "chat_opus"
+  ],
+  "verdict": "arguable",
+  "issue": "Occupants must vacate immediately on tenant's death, without statutory notice",
+  "statute_citation": "D.C. Code § 42-3505.01(a)(1)",
+  "reasoning": "D.C. Code § 42-3501.03(36) (read in DC_extra_adjudication.txt) defines a tenant to include any person entitled to occupancy, so listed occupants may be protected tenants whom this clause orders out at once with no notice and no statutory ground for eviction. Whether occupants keep that status once the leaseholder dies is not settled on the face of the lease, and the clause states a duty to vacate rather than a removal procedure, so readers could disagree.",
+  "re_judged_on_flagged_sentence": false,
+  "added_to_answer_key": "yes, as arguable",
+  "excerpt": "In the event that the Tenant(s) listed herein should die at any time during the tenancy, there is no right of survivorship, inheritance, or assignment of this Lease Contract or the Apartment. In the event that the named Tenant(s) dies, all occupants must immediately vacate the Apartment.",
+  "round": 1
+ },
+ {
+  "id": "Q03",
+  "lease_file": "VA-2",
+  "page": 69,
+  "flagged_text": "monthly TLL Reimbursement Charge",
+  "flagged_by": [
+   "chat_opus"
+  ],
+  "verdict": "arguable",
+  "issue": "Tenant pays for landlord's TLL policy, which does not insure tenant",
+  "statute_citation": "Va. Code § 55.1-1206(A)",
+  "reasoning": "The charge buys the Owner's TLL Policy, which page 70 says does not make Residents an insured; if that policy is damage insurance obtained on the tenant's behalf, § 55.1-1206(A) requires the tenant be an insured. It may instead be other landlord insurance whose cost § 55.1-1206(E) lets the landlord recover as rent, so reasonable readers could disagree.",
+  "re_judged_on_flagged_sentence": false,
+  "added_to_answer_key": "yes, as arguable",
+  "excerpt": "If Residents do not have coverage for the Required Insurance under the Lease or fails to provide proof of such coverage to Owner/Manager, Residents understand that Owner and/or Manager will obtain their own coverage for the Required Insurance, and agree to reimburse Owner for its actual expense of obtaining such coverage as follows:",
+  "also_added_excerpt": "Monthly TLL Reimbursement Charge: $12.36",
+  "round": 1
+ },
+ {
+  "id": "Q04",
+  "lease_file": "VA-1",
+  "page": 2,
+  "flagged_text": "an administrative fee of $50; (d) interest from the date of the check or transfer; (e) a civil recovery not to exceed $250; AND (f) all other amounts recoverable by the Landlord pursuant to this Lease or by law",
+  "flagged_by": [
+   "chat_opus"
+  ],
+  "verdict": "out_of_scope",
+  "issue": "",
+  "statute_citation": "Va. Code § 55.1-1200",
+  "reasoning": "The $50 administrative fee is within the VRLTA's $50 bad-check processing fee cap, and § 55.1-1245(F) contemplates the landlord seeking civil recovery under § 8.01-27.2. Any objection to stacking bank charges, interest and a $250 civil recovery rests on §§ 8.01-27.1 and 8.01-27.2, which are outside the VRLTA.",
+  "re_judged_on_flagged_sentence": false,
+  "round": 1
+ },
+ {
+  "id": "Q05",
+  "lease_file": "VA-2",
+  "page": 17,
+  "flagged_text": "licensed pest control professional to treat the dwelling and building. We can select the method of treating the dwelling, building and common areas for bed bugs. We can also inspect and treat adjacent or neighboring dwellings to the infestation even if those dwellings are not the source or cause of the known infestation. Unless otherwise prohibited by law, you are responsible for and must, at your own expense, have your own personal property, furniture, clothing and possessions treated according to accepted treatment methods established by a licensed pest control firm that we approve",
+  "flagged_by": [
+   "chat_opus"
+  ],
+  "verdict": "lawful",
+  "issue": "",
+  "statute_citation": "Va. Code § 55.1-1227(A)(3)",
+  "reasoning": "The VRLTA puts the duty to keep the occupied area free of pests on the tenant and imposes no landlord duty to treat the tenant's personal belongings, and the clause is qualified by \"Unless otherwise prohibited by law.\" No VRLTA section prohibits requiring the tenant to treat its own property.",
+  "re_judged_on_flagged_sentence": false,
+  "round": 1
+ },
+ {
+  "id": "Q06",
+  "lease_file": "DC-1",
+  "page": 43,
+  "flagged_text": "Resident(s) acknowledges that Manager has furnished controlled access on the Property for the sole purpose of protecting the Property and not for Resident(s) security",
+  "flagged_by": [
+   "chat_opus"
+  ],
+  "verdict": "arguable",
+  "issue": "Disclaims access-control duty to residents, undercutting negligence liability for the facility",
+  "statute_citation": "14 DCMR § 304.3",
+  "reasoning": "The acknowledgment disclaims any security purpose for a facility the owner installs and operates, which works to defeat negligence claims tied to its operation or maintenance. It does not itself say the owner is not liable (the express covenant not to sue is in paragraph 6, outside this span), so whether it is a prohibited liability limitation is debatable.",
+  "re_judged_on_flagged_sentence": false,
+  "added_to_answer_key": "yes, as arguable",
+  "excerpt": "Resident(s) acknowledges that Manager has furnished controlled access on the Property for the sole purpose of protecting the Property and not for Resident(s) security. Resident(s) further acknowledges that any benefit Resident(s) may receive from the controlled access is only incidental to the existence of the controlled access.",
+  "round": 1
+ },
+ {
+  "id": "Q07",
+  "lease_file": "VA-2",
+  "page": 1,
+  "flagged_text": "A reletting charge of $ __________ (not to exceed ______ % of the highest monthly Rent during the Lease term) may be charged in certain default situations",
+  "flagged_by": [
+   "chat_opus"
+  ],
+  "verdict": "lawful",
+  "issue": "",
+  "statute_citation": "Va. Code § 55.1-1226(A)",
+  "reasoning": "The filled-in cover sheet shows the reletting charge as N/A, the animal deposit as [deposit] and a $500 one-time animal fee. A nonrefundable fee is not a security deposit, the $100 deposit is far below two months' rent, and the VRLTA does not regulate animal fees.",
+  "re_judged_on_flagged_sentence": false,
+  "round": 1
+ },
+ {
+  "id": "Q08",
+  "lease_file": "DC-1",
+  "page": 6,
+  "flagged_text": "Such conduct is considered a default for which we need not give you notice",
+  "flagged_by": [
+   "chat_opus"
+  ],
+  "verdict": "arguable",
+  "issue": "Waives notice of default that statute requires before recovering possession",
+  "statute_citation": "D.C. Code § 42-3505.01(a)(1)",
+  "reasoning": "The clause declares a default that needs no notice, while § 42-3505.01(a)(1) bars eviction for any reason without a compliant written notice. In context the default only triggers acceleration of rent after an early move-out or move-out notice, and paragraph 33 keeps notices required by statute, so whether it reaches possession is debatable.",
+  "re_judged_on_flagged_sentence": false,
+  "added_to_answer_key": "yes, as arguable",
+  "excerpt": "(1) you move out or give oral or written notice (by you) of intent to move out before the Lease Contract term or renewal period ends; and (2) you’ve not paid all rent for the entire Lease Contract term or renewal period. Such conduct is considered a default for which we need not give you notice.",
+  "round": 1
+ },
+ {
+  "id": "Q09",
+  "lease_file": "DC-1",
+  "page": 13,
+  "flagged_text": "Monthly Administrative Billing Fee: $ 3.60 (not to exceed $ 3.60 )",
+  "flagged_by": [
+   "app_opus"
+  ],
+  "verdict": "arguable",
+  "issue": "Charges $3.60 monthly administrative fee for third-party utility billing",
+  "statute_citation": "D.C. Code § 42-3505.10(b-2)(1)(A)",
+  "reasoning": "The PDF shows a filled-in Monthly Administrative Billing Fee of $3.60 for billing through YES Energy Management, and the statute bars any administrative fee for third-party billing. The fee table is prefaced by 'To the extent permitted by law' and paragraph 10 says no fee will be used where unlawful, so under the savings-language rule this is arguable rather than clear.",
+  "re_judged_on_flagged_sentence": false,
+  "added_to_answer_key": "yes, as arguable",
+  "excerpt": "Monthly Administrative Billing Fee: $ 3.60 (not to exceed $ 3.60 )",
+  "round": 1
+ },
+ {
+  "id": "Q10",
+  "lease_file": "DC-2",
+  "page": 2,
+  "flagged_text": "the “Security Deposit”), the receipt of which is hereby acknowledged, which sum does not exceed one (1) month’s Rent. The Security Deposit shall be held as collateral security and applied on any rent or unpaid utility bill or other charge payable by Tenant that may remain due and owing at any time during or at the expiration of this Lease",
+  "flagged_by": [
+   "chat_opus"
+  ],
+  "verdict": "lawful",
+  "issue": "",
+  "statute_citation": "14 DCMR § 308.2",
+  "reasoning": "The PDF shows a [deposit] against monthly rent of [rent], within the one-month cap, and the rest of the clause tracks the regulation's purpose for the deposit.",
+  "re_judged_on_flagged_sentence": false,
+  "round": 1
+ },
+ {
+  "id": "Q11",
+  "lease_file": "VA-2",
+  "page": 6,
+  "flagged_text": "during the term of this Agreement, any locality, city, state, or Federal Government imposes upon us, any fee, charge, or tax, which is related to or charged by the number of occupants, or by the apartment unit itself, such that we are charged a fee, charge, or tax, based upon your use or occupancy of the apartment, we may add this charge as Additional Rent, during the term of the Lease Contract, with thirty (30) days advance written notice to you. After this written notice (the amount or approximate amount of the charge, will be included), you agree to pay, as Additional Rent, the amount of the charge, tax or fee imposed upon us, as a result of your occupancy",
+  "flagged_by": [
+   "app_opus"
+  ],
+  "verdict": "arguable",
+  "issue": "Landlord may add new rent charges mid-term by notice alone",
+  "statute_citation": "Va. Code § 55.1-1204(I)",
+  "reasoning": "The clause lets the landlord impose new additional rent during the term on 30 days' notice without the tenant's written consent, and the charge is not itemized on the cover sheet (Property Tax Assessment is unchecked) as § 55.1-1204.1 contemplates. The tenant's advance agreement in the lease and the \"Unless otherwise prohibited by law\" qualifier leave room for disagreement.",
+  "re_judged_on_flagged_sentence": false,
+  "added_to_answer_key": "yes, as arguable",
+  "excerpt": "we may add this charge as Additional Rent, during the term of the Lease Contract, with thirty (30) days advance written notice to you. After this written notice (the amount or approximate amount of the charge, will be included), you agree to pay, as Additional Rent, the amount of the charge, tax or fee imposed upon us, as a result of your occupancy.",
+  "round": 1
+ },
+ {
+  "id": "Q12",
+  "lease_file": "DC-1",
+  "page": 11,
+  "flagged_text": "remove the animal immediately and permanently from the premises. We also have all other rights and remedies set forth in the Lease Contract, including damages, eviction, and attorney’s fees. 12. \u0007COMPLAINTS ABOUT ANIMAL. You must immediately and permanently remove the animal from the premises if we receive a reasonable complaint from a neighbor or other tenant or if we, in our sole discretion, determine that the animal has disturbed neighbors or other tenants",
+  "flagged_by": [
+   "chat_opus"
+  ],
+  "verdict": "lawful",
+  "issue": "",
+  "statute_citation": "D.C. Code § 42-3505.01(b)",
+  "reasoning": "Paragraph 12 requires removing the pet after a reasonable complaint or a finding that it disturbed others, which is a lawful condition on keeping a pet. It does not cut short the notice and 30-day cure that § 42-3505.01(b) requires before the landlord can recover possession, and no provided DC landlord-tenant section bars it.",
+  "re_judged_on_flagged_sentence": true,
+  "round": 1
+ },
+ {
+  "id": "Q13",
+  "lease_file": "DC-1",
+  "page": 1,
+  "flagged_text": "Any promise by the Tenant to leave, restore, surrender, or yield the Apartment in good repair does not obligate the Tenant to make substantial repairs, replace obsolete materials, or fix other defects without negligence or fault on the Tenant’s part",
+  "flagged_by": [
+   "chat_opus"
+  ],
+  "verdict": "lawful",
+  "issue": "",
+  "statute_citation": "",
+  "reasoning": "The sentence protects the tenant by limiting what a promise to surrender in good repair requires; no provided section prohibits it.",
+  "re_judged_on_flagged_sentence": false,
+  "round": 1
+ },
+ {
+  "id": "Q14",
+  "lease_file": "DC-2",
+  "page": 7,
+  "flagged_text": "If the notice does not comply with the time requirements of this paragraph 3 (Lease Term), even if you move by the last date in the lease term, you will be responsible for an additional month’s rent",
+  "flagged_by": [
+   "chat_opus"
+  ],
+  "verdict": "lawful",
+  "issue": "",
+  "statute_citation": "D.C. Code § 42-3505.53",
+  "reasoning": "The 60-day notice requirement is valid because paragraph 40 states it expires with the initial term and gives a 30-day right afterward, and paragraph 7 sets rent-increase notice 30 days beyond it. The extra month's rent for short notice is a one-sided charge that no provided section prohibits.",
+  "re_judged_on_flagged_sentence": false,
+  "round": 1
+ },
+ {
+  "id": "Q15",
+  "lease_file": "DC-2",
+  "page": 10,
+  "flagged_text": "Landlord provides to RentGrow access to late fee records of tenants and records of tenant moveouts with an unpaid balance (and no payment plan), and RentGrow includes that information in screening reports provided to its landlord customers",
+  "flagged_by": [
+   "chat_opus"
+  ],
+  "verdict": "lawful",
+  "issue": "",
+  "statute_citation": "",
+  "reasoning": "Reporting late-fee records and unpaid move-out balances to a screening company is not restricted by any provision in the DC landlord-tenant texts provided.",
+  "re_judged_on_flagged_sentence": false,
+  "round": 1
+ },
+ {
+  "id": "Q16",
+  "lease_file": "DC-1",
+  "page": 16,
+  "flagged_text": "Where the terms or conditions found in this Addendum vary or contradict any terms or conditions found in the Lease Contract, this Addendum shall control",
+  "flagged_by": [
+   "chat_opus"
+  ],
+  "verdict": "lawful",
+  "issue": "",
+  "statute_citation": "",
+  "reasoning": "An order-of-precedence clause between the Bed Bug Addendum and the lease does not itself conflict with any section.",
+  "re_judged_on_flagged_sentence": false,
+  "round": 1
+ },
+ {
+  "id": "Q17",
+  "lease_file": "DC-1",
+  "page": 7,
+  "flagged_text": "Should you fail to sign such a form, you will be held liable for all rents and other charges which accrue; 1) Until the date such form is signed, or 2) Until the last day of the month in which the US Marshal’s Service has executed a Writ of Restitution for the apartment",
+  "flagged_by": [
+   "chat_opus"
+  ],
+  "verdict": "lawful",
+  "issue": "",
+  "statute_citation": "D.C. Code § 42-3505.52",
+  "reasoning": "Tying continued rent liability to signing a surrender form is one-sided, but no provided section addresses it, and the lease separately commits to relet and credit rent received, consistent with the mitigation duty. The severability clause in the span is lawful.",
+  "re_judged_on_flagged_sentence": false,
+  "round": 1
+ },
+ {
+  "id": "Q18",
+  "lease_file": "DC-1",
+  "page": 55,
+  "flagged_text": "The Parties expressly accept and agree that Landlord’s limitation of access to or closing of common areas and amenity spaces shall not relieve Resident of any financial obligations arising under the Lease, and shall not serve as grounds for either party’s termination of the Lease",
+  "flagged_by": [
+   "chat_opus"
+  ],
+  "verdict": "lawful",
+  "issue": "",
+  "statute_citation": "",
+  "reasoning": "Closing amenities during a declared public health emergency without rent relief is unfavorable, but no provided section prohibits it, and any service-reduction claim would depend on rent-control facts outside this clause.",
+  "re_judged_on_flagged_sentence": false,
+  "round": 1
+ },
+ {
+  "id": "Q19",
+  "lease_file": "DC-1",
+  "page": 2,
+  "flagged_text": "Rent abatement or Lease Contract termination does not apply if delay is for cleaning or repairs that do not prevent you from occupying the apartment",
+  "flagged_by": [
+   "app"
+  ],
+  "verdict": "lawful",
+  "issue": "",
+  "statute_citation": "",
+  "reasoning": "The delay-of-occupancy terms grant abatement and termination rights and do not waive the voiding rule of 14 DCMR § 302.1; no provided section bars limiting termination to the period before the unit is ready.",
+  "re_judged_on_flagged_sentence": false,
+  "round": 1
+ },
+ {
+  "id": "Q20",
+  "lease_file": "DC-2",
+  "page": 8,
+  "flagged_text": "b) tender payment to Tenant of the Security Deposit funds, plus applicable interest as required by law if there are no deductions to be made",
+  "flagged_by": [
+   "chat_opus"
+  ],
+  "verdict": "lawful",
+  "issue": "",
+  "statute_citation": "14 DCMR § 309.1",
+  "reasoning": "The clause tracks the 45-day deadline and the tender-or-notify options of 14 DCMR § 309.1, using certified mail, and adds the 30-day refund step of § 309.2.",
+  "re_judged_on_flagged_sentence": false,
+  "round": 1
+ },
+ {
+  "id": "Q21",
+  "lease_file": "DC-1",
+  "page": 45,
+  "flagged_text": "Tenant hereby waives and relinquishes any rights, claims, or causes of action against Owner related to delays in delivering the apartment, including, but not limited to, any holdover rent, or other penalties imposed at tenant’s current place of residence",
+  "flagged_by": [
+   "chat_opus"
+  ],
+  "verdict": "arguable",
+  "issue": "Blanket waiver of delay claims with no carve-out for owner negligence",
+  "statute_citation": "14 DCMR § 304.3",
+  "reasoning": "The waiver covers every claim tied to delayed delivery, including delays caused by the owner's negligent repair or construction work, with no negligence carve-out. Section 304.3 targets damages for injuries to persons or property, and delay losses such as holdover rent are mostly economic, so its reach here is debatable.",
+  "re_judged_on_flagged_sentence": false,
+  "added_to_answer_key": "yes, as arguable",
+  "excerpt": "Tenant hereby waives and relinquishes any rights, claims, or causes of action against Owner related to delays in delivering the apartment, including, but not limited to, any holdover rent, or other penalties imposed at tenant’s current place of residence, provided however, that Owner agrees that rent will not commence under the Lease Contract until possession is delivered to tenant.",
+  "round": 1
+ },
+ {
+  "id": "Q22",
+  "lease_file": "DC-1",
+  "page": 3,
+  "flagged_text": "Any violation of the License for Enclosed Garage, Carport, or Storage Unit is a material breach of lease",
+  "flagged_by": [
+   "chat_opus"
+  ],
+  "verdict": "lawful",
+  "issue": "",
+  "statute_citation": "D.C. Code § 42-3505.01(b)",
+  "reasoning": "Treating a violation of the parking or storage license as a material lease breach does not shorten the notice and 30-day cure that § 42-3505.01(b) requires before possession can be recovered; no provided section bars it.",
+  "re_judged_on_flagged_sentence": false,
+  "round": 1
+ },
+ {
+  "id": "Q23",
+  "lease_file": "DC-2",
+  "page": 22,
+  "flagged_text": "If Tenants are unprepared for a scheduled treatment date Owner will prepare Tenants’ dwelling and charge Tenants accordingly",
+  "flagged_by": [
+   "chat_opus"
+  ],
+  "verdict": "lawful",
+  "issue": "",
+  "statute_citation": "D.C. Code § 42-3505.10(b-2)(1)(A)",
+  "reasoning": "The addendum assigns preparation for extermination to the tenant, so charging for that preparation when the tenant is unprepared is not a fee for a service the landlord must provide to keep the unit habitable.",
+  "re_judged_on_flagged_sentence": false,
+  "round": 1
+ },
+ {
+  "id": "Q24",
+  "lease_file": "VA-1",
+  "page": 4,
+  "flagged_text": "If Tenant fails to provide a certificate of insurance, Landlord may obtain a policy covering Tenant’s personal property and liability coverage. The cost shall be added either to the monthly Rent or paid by Tenant as invoiced by Landlord",
+  "flagged_by": [
+   "chat_opus"
+  ],
+  "verdict": "lawful",
+  "issue": "",
+  "statute_citation": "Va. Code § 55.1-1206(B)",
+  "reasoning": "Section 1.7 requires the tenant to carry renter's-type coverage, and § 55.1-1206(B) and (D) let the landlord obtain renter's insurance covering the tenant when the tenant's required coverage is missing and recover its cost as rent. A policy covering the tenant's personal property and liability tracks that permission, and nothing in the clause exceeds it.",
+  "re_judged_on_flagged_sentence": true,
+  "round": 1
+ },
+ {
+  "id": "Q25",
+  "lease_file": "VA-1",
+  "page": 11,
+  "flagged_text": "per diem Rent calculated based on the amount of monthly Rent set forth in section 1.4 hereof, multiplied by the number of days Tenant stays in possession of the Premises after the vacating date, and storage, hotel, meals, mileage, etc., payable to the new tenant; (ii) liquidated damages equal to one-hundred and fifty percent (150%) (or one-hundred percent (100%) for any HUD property) of the Per Diem Rent, multiplied by",
+  "flagged_by": [
+   "chat_opus"
+  ],
+  "verdict": "lawful",
+  "issue": "",
+  "statute_citation": "Va. Code § 55.1-1253(C)",
+  "reasoning": "Section 55.1-1253(C) lets the landlord recover actual damages, attorney fees and court costs from a holdover tenant and also contract for a liquidated damage penalty of up to 150 percent of per diem rent (100 percent for HUD units). The clause stays within those caps.",
+  "re_judged_on_flagged_sentence": false,
+  "round": 1
+ },
+ {
+  "id": "Q26",
+  "lease_file": "VA-1",
+  "page": 7,
+  "flagged_text": "If Tenant fails to fulfill this responsibility, Landlord will enter Premises and perform the work. Once the work is complete, Landlord will deliver a bill to Tenant for the work, and such amounts are due as rent on the next rent due date, or if this Lease is terminated, immediate payment is due",
+  "flagged_by": [
+   "chat_opus"
+  ],
+  "verdict": "lawful",
+  "issue": "",
+  "statute_citation": "Va. Code § 55.1-1248",
+  "reasoning": "The clause covers an exterior gutter-cleaning duty that § 55.1-1220(D) lets the parties assign to the tenant. Unpaid gutter cleaning is not on its face a breach materially affecting health and safety under § 55.1-1248, and the lease's general access and repair clauses (3.6, 4.3 E) supply notice, so no conflict is visible without further inference.",
+  "re_judged_on_flagged_sentence": false,
+  "round": 1
+ },
+ {
+  "id": "Q27",
+  "lease_file": "DC-1",
+  "page": 3,
+  "flagged_text": "In the event that the named Tenant(s) dies, all occupants must immediately vacate the Apartment",
+  "flagged_by": [
+   "chat_opus"
+  ],
+  "verdict": "arguable",
+  "issue": "Occupants must vacate immediately on tenant's death, without statutory notice",
+  "statute_citation": "D.C. Code § 42-3505.01(a)(1)",
+  "reasoning": "D.C. Code § 42-3501.03(36) (read in DC_extra_adjudication.txt) defines a tenant to include any person entitled to occupancy, so listed occupants may be protected tenants whom this clause orders out at once with no notice and no statutory ground for eviction. Whether occupants keep that status once the leaseholder dies is not settled on the face of the lease, and the clause states a duty to vacate rather than a removal procedure, so readers could disagree.",
+  "re_judged_on_flagged_sentence": false,
+  "added_to_answer_key": "yes, as arguable",
+  "excerpt": "In the event that the Tenant(s) listed herein should die at any time during the tenancy, there is no right of survivorship, inheritance, or assignment of this Lease Contract or the Apartment. In the event that the named Tenant(s) dies, all occupants must immediately vacate the Apartment.",
+  "round": 1
+ },
+ {
+  "id": "Q28",
+  "lease_file": "DC-1",
+  "page": 4,
+  "flagged_text": "You must remove an illegal or unauthorized animal within 24 hours of notice from us, or you will be considered in default of this Lease Contract",
+  "flagged_by": [
+   "chat_opus"
+  ],
+  "verdict": "arguable",
+  "issue": "24-hour cure for animal violation versus statutory 30-day cure period",
+  "statute_citation": "D.C. Code § 42-3505.01(b)",
+  "reasoning": "Paragraph 24 makes failure to remove an animal within 24 hours a default and says animal violations expose the tenant to eviction, while § 42-3505.01(b) allows recovery of possession only after 30 days to correct. The clause does not itself authorize eviction on the 24-hour default, so readers could disagree.",
+  "re_judged_on_flagged_sentence": false,
+  "added_to_answer_key": "yes, as arguable",
+  "excerpt": "You must remove an illegal or unauthorized animal within 24 hours of notice from us, or you will be considered in default of this Lease Contract.",
+  "round": 1
+ },
+ {
+  "id": "Q29",
+  "lease_file": "VA-2",
+  "page": 65,
+  "flagged_text": "of every type, including but not limited to risks of personal injury or property damage, of whatever nature or severity, including incidents leading to or causing death, that are causally related to your use of common areas or amenities at the Community (including the gym, pool, clubroom, roof areas, lobby, elevators, and entryways). You agree to hold Owner and Manager harmless and to release and to waive any and all claims, allegations, actions, damages, losses, or liabilities of every type, that you may have against Owner and that are in any way related to or that arise from such use, except as the result of negligence on the part of the Owner that proximately caused the injury or damage alleged",
+  "flagged_by": [
+   "app_opus"
+  ],
+  "verdict": "lawful",
+  "issue": "",
+  "statute_citation": "Va. Code § 55.1-1220(B)",
+  "reasoning": "The amenity waiver expressly excepts claims resulting from the Owner's negligence that proximately caused the injury, which preserves the ordinary-care liability the VRLTA imposes. Under the rubric's decision rule, it does not conflict.",
+  "re_judged_on_flagged_sentence": false,
+  "round": 1
+ },
+ {
+  "id": "Q30",
+  "lease_file": "VA-1",
+  "page": 5,
+  "flagged_text": "The Tenant and/or Tenant's guests shall not keep pets on the Premises without the prior written consent of the Landlord and only pursuant to a fully executed Pet Addendum",
+  "flagged_by": [
+   "chat_opus"
+  ],
+  "verdict": "lawful",
+  "issue": "",
+  "statute_citation": "Va. Code § 55.1-1204(A)",
+  "reasoning": "The VRLTA does not restrict parking rules or a requirement of landlord consent and a pet addendum before keeping pets. Any assistance-animal question would arise under fair housing law, and the clause on its face addresses only pets.",
+  "re_judged_on_flagged_sentence": false,
+  "round": 1
+ },
+ {
+  "id": "Q31",
+  "lease_file": "DC-1",
+  "page": 4,
+  "flagged_text": "We are not obliged to furnish security personnel, security lighting, security gates or fences, or other forms of security unless required by statute or regulation. We do not provide any security measures or devices",
+  "flagged_by": [
+   "chat_opus"
+  ],
+  "verdict": "lawful",
+  "issue": "",
+  "statute_citation": "14 DCMR § 304.3",
+  "reasoning": "The sentences disclaim any duty to furnish security beyond what statute or regulation requires; they do not exempt the owner from liability for its own negligence, so § 304.3 is not triggered.",
+  "re_judged_on_flagged_sentence": false,
+  "round": 1
+ },
+ {
+  "id": "Q32",
+  "lease_file": "DC-2",
+  "page": 4,
+  "flagged_text": "written apartment rules and community policies, including instructions for care of our property, which may be attached to this Lease Contract as a written addendum. We reserve the right to change any written apartment rules and community policies at any time, and such amendments shall become effective and binding hereunder, as of the date the owner has sent a copy of them to you via first class mail",
+  "flagged_by": [
+   "chat_opus"
+  ],
+  "verdict": "lawful",
+  "issue": "",
+  "statute_citation": "",
+  "reasoning": "Changing community rules on mailed notice is one-sided, but no provided section prohibits it.",
+  "re_judged_on_flagged_sentence": false,
+  "round": 1
+ },
+ {
+  "id": "Q33",
+  "lease_file": "VA-2",
+  "page": 9,
+  "flagged_text": "the Owner shall be entitled to recover from the Resident the following, regardless of whether a lawsuit is filed or an order is obtained from a court: (i) rent due and owing as contracted for in the Lease Contract, (ii) other charges and fees as contracted for in the Lease Contract, (iii) late charges contracted for in the Lease Contract, (iv) reasonable attorneys’ fees incurred by Owner",
+  "flagged_by": [
+   "chat_opus"
+  ],
+  "verdict": "lawful",
+  "issue": "",
+  "statute_citation": "Va. Code § 55.1-1245(H)",
+  "reasoning": "The clause closely tracks § 55.1-1245(H) of the version in force. Reasonable attorney fees contracted for in the lease are recoverable under that subsection, so § 55.1-1208(A)(4) is not violated.",
+  "re_judged_on_flagged_sentence": false,
+  "round": 1
+ },
+ {
+  "id": "Q34",
+  "lease_file": "DC-1",
+  "page": 6,
+  "flagged_text": "rent and other charges payable by you for the period prior to termination of tenancy due to your default shall be and remain payable by you even if you are evicted, and all monthly rent and other charges for the remainder of the Lease Contract term or renewal period will be payable by you to us as damages incurred by us, and will be immediately due and delinquent",
+  "flagged_by": [
+   "chat_opus"
+  ],
+  "verdict": "lawful",
+  "issue": "",
+  "statute_citation": "D.C. Code § 42-3505.52",
+  "reasoning": "Acceleration of the remaining rent as damages is expressly made subject to the landlord's mitigation obligations, and the Mitigation of Damages paragraph commits to relet and credit rent received, which tracks § 42-3505.52.",
+  "re_judged_on_flagged_sentence": false,
+  "round": 1
+ },
+ {
+  "id": "Q35",
+  "lease_file": "VA-1",
+  "page": 1,
+  "flagged_text": "If Tenant vacates Premises prior to the end of Lease Term, Tenant shall still be responsible for what would have been the Rent for the balance of the Lease Term, including any physical damages to Premises and such other remedies as may be appropriate under Lease and Virginia Law",
+  "flagged_by": [
+   "chat_opus"
+  ],
+  "verdict": "arguable",
+  "issue": "Full remaining-term rent liability omits mitigation and re-rental cutoff",
+  "statute_citation": "Va. Code § 55.1-1251",
+  "reasoning": "Read alone, the clause makes the tenant liable for rent for the whole remaining term even if the unit is re-let, which § 55.1-1251 does not allow. But it does not waive mitigation, it defers to Virginia law, and section 4.3 B of the lease subjects the same damages to the landlord's duty to mitigate, so readers could disagree.",
+  "re_judged_on_flagged_sentence": false,
+  "added_to_answer_key": "yes, as arguable",
+  "excerpt": "If Tenant vacates Premises prior to the end of Lease Term, Tenant shall still be responsible for what would have been the Rent for the balance of the Lease Term, including any physical damages to Premises and such other remedies as may be appropriate under Lease and Virginia Law.",
+  "round": 1
+ },
+ {
+  "id": "Q36",
+  "lease_file": "DC-1",
+  "page": 5,
+  "flagged_text": "Security deposit refunds will only be issued via one check, and any deduction itemizations will be mailed to one Tenant only",
+  "flagged_by": [
+   "chat_opus"
+  ],
+  "verdict": "lawful",
+  "issue": "",
+  "statute_citation": "D.C. Code § 42-3505.55",
+  "reasoning": "Section 42-3505.55 lets a housing provider bar subletting and assignment in its sole and absolute discretion when the lease says so. Paying the deposit refund by one check and mailing itemizations to one co-tenant is not addressed by the provided sections, and paragraph 43 still requires certified mail.",
+  "re_judged_on_flagged_sentence": false,
+  "round": 1
+ },
+ {
+  "id": "Q37",
+  "lease_file": "DC-1",
+  "page": 7,
+  "flagged_text": "All Tenants, guests, and occupants must abandon the apartment before the forty-five (45) day period for us to provide you with a written list of any damages to the Premises together with a statement of costs properly incurred or Rent unpaid that will form the basis of a deduction from your Security Deposit or tender payment to you of the Security Deposit",
+  "flagged_by": [
+   "chat_opus"
+  ],
+  "verdict": "lawful",
+  "issue": "",
+  "statute_citation": "14 DCMR § 309.1",
+  "reasoning": "Requiring all occupants to leave before the 45-day deposit period runs fits § 309.1, which runs from termination of the tenancy, and paragraph 43 restates that deadline. The first sentence is a garbled statement about applying the deposit to rent, not a waiver.",
+  "re_judged_on_flagged_sentence": false,
+  "note": "The adjudicator also read the garbled first sentence of this span (two-column text) and found nothing to label.",
+  "round": 1
+ },
+ {
+  "id": "Q38",
+  "lease_file": "VA-1",
+  "page": 4,
+  "flagged_text": "of the Term, Landlord shall not be liable to Tenant for any damages other than to rebate any Rent paid by Tenant for such portion of the Term during which the Premises are not delivered to Tenant",
+  "flagged_by": [
+   "chat_opus"
+  ],
+  "verdict": "lawful",
+  "issue": "",
+  "statute_citation": "Va. Code § 55.1-1238",
+  "reasoning": "The damages limit applies only where the landlord cannot deliver possession through no fault of its own, while the statutory remedies in § 55.1-1238 arise from willful failure to deliver, so no liability arising under law is limited. The neighboring fragment of section 2.2 (damages and reasonable attorney fees) is consistent with § 55.1-1245(H).",
+  "re_judged_on_flagged_sentence": false,
+  "round": 1
+ },
+ {
+  "id": "Q39",
+  "lease_file": "DC-1",
+  "page": 17,
+  "flagged_text": "or treatment to eradicate the presence of bedbugs in adjacent or adjoining units that become infested as determined by a pest control professional: (a) based on your knowingly interfering with, obstructing, or actively hindering inspection for, or treatment to eradicate the presence of bedbugs in your dwelling unit or (b) because repeated eradications are necessary due to your failure to properly maintain the dwelling unit. If you knowingly interfere with, obstruct, or actively hinder inspection for, or treatment to eradicate the presence of bedbugs in your dwelling unit, you will be in breach of your Lease, and we are entitled to terminate your Lease pursuant to applicable law based on your violation of an obligation of tenancy",
+  "flagged_by": [
+   "chat_opus"
+  ],
+  "verdict": "lawful",
+  "issue": "",
+  "statute_citation": "",
+  "reasoning": "Charges for bedbug inspection or treatment are limited to cases where the tenant knowingly obstructs treatment or fails to maintain the unit, and termination is only 'pursuant to applicable law'; no provided section bars these tenant-fault charges.",
+  "re_judged_on_flagged_sentence": false,
+  "round": 1
+ },
+ {
+  "id": "Q40",
+  "lease_file": "DC-2",
+  "page": 6,
+  "flagged_text": "Such conduct is considered a default for which we need not give you notice",
+  "flagged_by": [
+   "app_opus"
+  ],
+  "verdict": "arguable",
+  "issue": "Waives notice of default that statute requires before recovering possession",
+  "statute_citation": "D.C. Code § 42-3505.01(a)(1)",
+  "reasoning": "The clause declares a default that needs no notice, while § 42-3505.01(a)(1) bars eviction for any reason without a compliant written notice. In context the default only triggers acceleration of rent after an early move-out or move-out notice, and paragraph 33 keeps notices required by statute, so whether it reaches possession is debatable.",
+  "re_judged_on_flagged_sentence": false,
+  "added_to_answer_key": "yes, as arguable",
+  "excerpt": "(1) you move out or give oral or written notice (by you) of intent to move out before the Lease Contract term or renewal period ends; and (2) you’ve not paid all rent for the entire Lease Contract term or renewal period. Such conduct is considered a default for which we need not give you notice.",
+  "round": 1
+ },
+ {
+  "id": "Q41",
+  "lease_file": "DC-1",
+  "page": 43,
+  "flagged_text": "Resident(s) shall be liable for a charge of",
+  "flagged_by": [
+   "chat_opus"
+  ],
+  "verdict": "lawful",
+  "issue": "",
+  "statute_citation": "D.C. Code § 42-3505.10(b-2)(1)(A)",
+  "reasoning": "A per-device charge for access devices the tenant loses, damages or fails to return is a tenant-caused replacement cost, not a fee for a service the landlord must provide to keep the unit habitable.",
+  "re_judged_on_flagged_sentence": false,
+  "round": 1
+ },
+ {
+  "id": "Q42",
+  "lease_file": "DC-1",
+  "page": 3,
+  "flagged_text": "the apartment community for business purposes. We may regulate: (1) the use of patios, balconies, and porches; (2) the conduct of furniture movers and delivery persons; and (3) recreational activities in common areas. We may exclude from the apartment community guests, visitors or others who, in our judgment, have been violating the law, violating this Lease Contract or any apartment rules and community policies, or disturbing other tenants, neighbors, visitors, or owner representatives",
+  "flagged_by": [
+   "chat_opus"
+  ],
+  "verdict": "lawful",
+  "issue": "",
+  "statute_citation": "",
+  "reasoning": "Limits on home businesses, regulation of patios and common-area activities, and exclusion of guests who break the law or the lease are not prohibited by any provided DC landlord-tenant section.",
+  "re_judged_on_flagged_sentence": false,
+  "round": 1
+ },
+ {
+  "id": "Q43",
+  "lease_file": "DC-1",
+  "page": 6,
+  "flagged_text": "the date contained in your move-out notice (or beyond a different move-out date agreed to by the parties in writing). If a holdover occurs, then: (1) holdover rent is due in advance on a daily basis and may become delinquent without notice or demand; (2) if you hold over after the date contained in your move-out notice, you shall be liable to us for rent at double the rate payable according to the terms of the tenancy for all the time that you shall wrongfully hold over",
+  "flagged_by": [
+   "chat_opus"
+  ],
+  "verdict": "lawful",
+  "issue": "",
+  "statute_citation": "D.C. Code § 42-3207",
+  "reasoning": "The double-rent holdover term tracks § 42-3207 and applies only to wrongful holdover after the tenant's own move-out notice; damages are made subject to mitigation, and cumulative remedies are lawful.",
+  "re_judged_on_flagged_sentence": false,
+  "round": 1
+ },
+ {
+  "id": "R01",
+  "round": 2,
+  "lease_file": "DC-1",
+  "page": 52,
+  "flagged_text": "OF THE PARTIES’ LEASE CONTRACT AND GOOD CAUSE FOR TERMINATION OF TENANCY. A single violation of any of the provisions of this Addendum shall be deemed a serious violation, and a material default, of the parties’ Lease Contract. It is understood that a single violation shall be good cause for taking action to terminate the Lease Contract. In addition to the foregoing, Owner may terminate Tenant’s tenancy for any other lawful reason, and by any lawful method",
+  "flagged_by": [
+   "app_two_pass"
+  ],
+  "verdict": "arguable",
+  "issue": "Single violation made termination cause, ignoring DC 30-day cure right",
+  "statute_citation": "D.C. Code § 42-3505.01(b)",
+  "reasoning": "DC lets a housing provider recover possession for a lease violation only after notice and a 30-day failure to correct, and the clause makes one violation good cause to terminate. Because it speaks of good cause for taking action to terminate and adds that the owner will use lawful methods, it can be read as allowing a statutory notice to correct, so the conflict is arguable rather than clear.",
+  "added_to_answer_key": "yes, as arguable",
+  "excerpt": "A single violation of any of the provisions of this Addendum shall be deemed a serious violation, and a material default, of the parties’ Lease Contract. It is understood that a single violation shall be good cause for taking action to terminate the Lease Contract."
+ },
+ {
+  "id": "R03",
+  "round": 2,
+  "lease_file": "DC-2",
+  "page": 37,
+  "flagged_text": "OWNER IS NOT LIABLE FOR INTERRUPTIONS, INABILITY TO CONNECT, OR FAILURE OF PROVIDER TO PROVIDE THE BULK SERVICES, NOR FOR ANY LOSSES, DAMAGES, OR EXPENSES, DIRECTLY OR INDIRECTLY, RELATED TO THE BULK SERVICES. NO CHANGE, FAILURE, INTERFERENCE, DISRUPTION, DEFECT, UNAVAILABILITY, OR UNSUITABILITY IN THE BULK SERVICES CONSTITUTES OR MAY BE DEEMED TO CONSTITUTE AN ACTUAL OR CONSTRUCTIVE EVICTION, IN WHOLE OR IN PART, OR IN ANY WAY ENTITLE RESIDENT TO ANY ABATEMENT OR DIMINUTION OF RENT",
+  "flagged_by": [
+   "app_two_pass"
+  ],
+  "verdict": "arguable",
+  "issue": "Blanket owner liability waiver for bulk services lacks negligence carve-out",
+  "statute_citation": "14 DCMR § 304.3",
+  "reasoning": "The first sentence exempts the owner from all losses and damages related to the internet service with no exception for the owner's negligence, which 14 DCMR § 304.3 forbids for injuries to persons or property from negligent operation or maintenance of facilities on the property. It is arguable because the service is supplied by a third-party provider and most such losses are service outages rather than injuries to persons or property; the no-abatement sentence does not conflict because no provided DC law requires internet service.",
+  "added_to_answer_key": "yes, as arguable",
+  "excerpt": "OWNER IS NOT LIABLE FOR INTERRUPTIONS, INABILITY TO CONNECT, OR FAILURE OF PROVIDER TO PROVIDE THE BULK SERVICES, NOR FOR ANY LOSSES, DAMAGES, OR EXPENSES, DIRECTLY OR INDIRECTLY, RELATED TO THE BULK SERVICES."
+ },
+ {
+  "id": "R04",
+  "round": 2,
+  "lease_file": "VA-1",
+  "page": 8,
+  "flagged_text": "Landlord or their designated representative(s), upon reasonable notification to Tenant and at reasonable times, may enter Premises in order to do any of the following: (a) inspect Premises; (b) make necessary or agreed upon repairs, decorations, alterations, or improvements; and (c) supply necessary or agreed services",
+  "flagged_by": [
+   "app_two_pass"
+  ],
+  "verdict": "lawful",
+  "issue": "",
+  "statute_citation": "Va. Code § 55.1-1229(A)(4)",
+  "reasoning": "The clause allows entry only for the purposes listed in § 55.1-1229(A)(1), on notice and at reasonable times as § 55.1-1229(A)(4) requires. It opens with \"Except as provided in Section 55.1-1229 of the VRLTA\", so the statutory 72-hour notice for unrequested routine maintenance still governs."
+ },
+ {
+  "id": "R05",
+  "round": 2,
+  "lease_file": "VA-2",
+  "page": 65,
+  "flagged_text": "Upon the sale or conveyance of the Property, Owner may transfer or assign any deposits to the new owner and all of Owner’s liability for such deposits shall terminate",
+  "flagged_by": [
+   "app_two_pass"
+  ],
+  "verdict": "arguable",
+  "issue": "Ends all deposit liability on any conveyance, without notice to tenant",
+  "statute_citation": "Va. Code § 55.1-1208(A)(5)",
+  "reasoning": "Section 55.1-1224 relieves a conveying landlord only after a good faith sale to a bona fide purchaser and only for events after notice to the tenant, while this clause ends all deposit liability on any conveyance with no notice. That broader release arguably limits liability arising under law, but the clause otherwise tracks §§ 55.1-1213 and 55.1-1224, and § 55.1-1224 begins \"Unless otherwise agreed\", so readers could disagree.",
+  "added_to_answer_key": "yes, as arguable",
+  "excerpt": "Upon the sale or conveyance of the Property, Owner may transfer or assign any deposits to the new owner and all of Owner’s liability for such deposits shall terminate."
+ },
+ {
+  "id": "R06",
+  "round": 2,
+  "lease_file": "VA-1",
+  "page": 9,
+  "flagged_text": "Tenant waives all claims against Landlord or any condemning authority due to the complete or partial taking of Premises, and shall not be entitled to receive any part of any award that Landlord may receive",
+  "flagged_by": [
+   "app_two_pass"
+  ],
+  "verdict": "arguable",
+  "issue": "Waives all condemnation claims against landlord, including § 55.1-1243.2 remedies",
+  "statute_citation": "Va. Code § 55.1-1243.2(A)",
+  "reasoning": "The clause is drafted for eminent domain (possession taken by the condemning authority, an award), and the waiver of claims against the condemning authority and of any share of the award rests on law outside the VRLTA. If \"governmental condemnation\" also reaches a building code condemnation, the waiver of all claims against Landlord would waive the § 55.1-1243.2 remedy, which § 55.1-1208(A)(1) forbids, but that reading of the clause's scope is debatable.",
+  "added_to_answer_key": "yes, as arguable",
+  "excerpt": "Tenant waives all claims against Landlord or any condemning authority due to the complete or partial taking of Premises, and shall not be entitled to receive any part of any award that Landlord may receive."
+ },
+ {
+  "id": "R02",
+  "round": 2,
+  "lease_file": "DC-2",
+  "page": 11,
+  "flagged_text": "New Account Fee: $ 15.00 (not to exceed $ 20.00 ) Monthly Administrative Billing Fee: $ 4.75 (not to exceed $ 5.00 )",
+  "flagged_by": [
+   "app_two_pass"
+  ],
+  "verdict": "not adjudicated",
+  "issue": "",
+  "statute_citation": "",
+  "reasoning": "The flag quotes the fee table of a provision already labeled arguable; the table line was added as a second excerpt for that label.",
+  "added_to_answer_key": "yes, as a second excerpt of an existing arguable label"
+ }
+]
