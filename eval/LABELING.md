@@ -6,7 +6,7 @@ This file documents the answer key the accuracy eval scores the app against. Rea
 
 - The labels were drafted by Claude (model claude-opus-5-5) on 2026-10-04: one labeling agent per lease, working from the rubric below. A second Claude pass then checked every excerpt and statute quote mechanically and reconciled identical clauses across leases (changes listed below).
 - No lawyer and no human has reviewed the labels yet. Until someone does, the eval measures agreement with a careful model-written answer key, not with legal ground truth.
-- The app under test also uses Claude models (Haiku 4.5 and Sonnet 4.6). The labelers never saw the app's prompts, code or output, and the labels were committed before the pipeline ran on these leases. The reviewing pass had read the app's prompts while building the eval, but no app output on these leases existed when the labels were frozen.
+- The app under test also uses Claude models: Opus 5 as the generator and Sonnet 4.6 as the judge (Haiku 4.5 and Sonnet 4.6 when the labels were written). The labelers never saw the app's prompts, code or output, and the labels were committed before the pipeline ran on these leases. The reviewing pass had read the app's prompts while building the eval, but no app output on these leases existed when the labels were frozen.
 
 ## Files
 
